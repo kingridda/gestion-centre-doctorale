@@ -19,33 +19,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-    <style>
-            .footer {
-                  position: 0;
-                  bottom: 0;
-                  width: 100%;
-                  height: 10rem;            /* Footer height */
-                } 
-            body {
-                    background: url('/img/background1.jpg') no-repeat center center fixed;
-                    -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    background-size: cover;
-                    -o-background-size: cover;
-                }
-    </style>
-
 <body>
-    <div id="app">
+    <div id="app" class ="app_body" >
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+
                 <ul class="navbar-nav">               <!-- Navbar tabs-->
                   <li class="nav-item" role="tablist">
                     <a class="nav-link" href="/show"  >Profile</a>
                   </li>
+
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Envoyer</a>
                     <div class="dropdown-menu">
@@ -54,16 +40,21 @@
                       <a class="dropdown-item" href="/profile/compte_rendu">Compte Rendu</a>
                     </div>
                   </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="/messages">Messages</a>
                   </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="/forum">Forum</a>
                   </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="/profile/dirm">Direction</a>
                   </li>
+
                 </ul>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -128,7 +119,7 @@
 
           <!-- Grid column -->
           <div class="col-md-12 mt-0 py-3 text-center">
-            <p style="line-height: 1.7rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            <p style="line-height: 1rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem
               aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
               explicabo.
@@ -141,7 +132,7 @@
       <!-- Footer Links -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <div class="footer-copyright text-center py-0">© 2020 Copyright:
         <a href="https://google.com"> GCD.com</a>
       </div>
       <!-- Copyright -->
