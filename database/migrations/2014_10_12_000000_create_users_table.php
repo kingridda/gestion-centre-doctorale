@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->index('encadrant_id');
+            $table->string('avatar')->default('default.png');
         });
     }
 
