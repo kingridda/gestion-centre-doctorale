@@ -21,7 +21,7 @@
 </head>
     <style>
             .footer {
-                  position: fixed;
+                  position: 0;
                   bottom: 0;
                   width: 100%;
                   height: 10rem;            /* Footer height */
@@ -119,7 +119,7 @@
 
 
 
-</html>
+
 <!-- Footer -->
     <footer class="page-footer font-small bg-dark text-white footer" >
     
@@ -148,3 +148,4 @@
 
     </footer>
     <!-- Footer -->
+    </html>

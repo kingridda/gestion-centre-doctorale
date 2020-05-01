@@ -22,15 +22,14 @@ return view('auth.disting_salarie');
 Route::get('/home', function () {
     return redirect('/profile');
 });
-Route::get('/show', function () {
-    return view('etudiantV.show_profile');
-});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-
+Route::get('/show', 'ProfileController@show_profile');
+Route::post('/show', 'ProfileController@change_avatar');
 Route::get('/profile/encm/show', 'ProfileController@show_messages');
 Route::post('/profile/encm', 'ProfileController@env_message');
 Route::get('/profile/encm/', 'ProfileController@env_message_show');

@@ -11,7 +11,13 @@ use App\Message;
 class ProfileController extends Controller
 {
         
-
+    public function show_profile(){
+        return view('etudiantV.show_profile')->withUser(Auth::user());
+    }
+    public function change_avatar(Request $request){
+        dd($request);
+        return redirect('/show');
+    }
 
         //gestion des massages
     public function env_message_show(){

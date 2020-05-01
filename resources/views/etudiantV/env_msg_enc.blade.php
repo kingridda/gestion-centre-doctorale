@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="textAlign: center; fontWeight: bold;">Add new post</div>
+                <div class="card-header" style="textAlign: center; fontWeight: bold;">Envoyer message à l'encadrant</div>
 
                 <div class="card-body">
                     <form method="POST" action="/profile/encm">
