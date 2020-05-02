@@ -38,6 +38,44 @@ class AdminController extends Controller
     public function doctorants(){
         return view('adminV.docs')->withDocs(User::all());
     }
+
+    public function modifie_doctorants(Request $request){
+        
+        $this->validate($request, [
+            'idU' => ['required'],
+            'name' => [ 'max:255'],
+            'email' => [  'max:255', 'unique:users'],
+            'gsm' => [  'max:15'],
+            'prenom' => [  'max:255'],
+            'ville' => [  'max:255'],
+            'adresse' => [],
+            'cin' => [  'max:10'],
+        ]);
+            $data = User::find($request->idU);
+            if($request->name) $data->name = $request->name;
+            if($request->email) $data->email = $request->email;
+            if($request->gsm) $data->gsm = $request->gsm;
+            if($request->prenom) $data->prenom = $request->prenom;
+            if($request->ville) $data->ville = $request->ville;
+            if($request->adresse) $data->adresse = $request->adresse;
+            if($request->cin) $data->cin = $request->cin;
+            DB::table('users')->where('id',$request->idU)->update([
+                        'name'=> $data->name,
+                        'email' => $data->email,
+                        'gsm' => $data->gsm,
+                        'prenom' => $data->prenom,
+                        'ville' => $data->ville,
+                        'adresse' => $data->adresse,
+                        'cin' => $data->cin,
+            ]);
+
+            return redirect('admin/doc');
+    }
+
+
+
+
+
     public function changer_doctorant(Request $request){
         DB::table('users');
 
@@ -65,6 +103,25 @@ class AdminController extends Controller
         
         return redirect('/admin/theses');
     }
+    public function supprimer_these(Request $request){
+         $this->validate($request, [
+            'supp_id' => 'required'
+             ]);
+        DB::table('theses')->where('id', $request->supp_id)->delete();
+        
+        return redirect('/admin/theses');
+    }
+    public function supprimer_soutenance(Request $request){
+         $this->validate($request, [
+            'supp_id' => 'required'
+             ]);
+        DB::table('soutenances')->where('id', $request->supp_id)->delete();
+        
+        return redirect('/admin/soutenances');
+    }
+    
+
+
     public function store_encadrant(Request $request){
          $this->validate($request, [
             'name' => 'required|string|max:30',
@@ -81,4 +138,51 @@ class AdminController extends Controller
         
         return redirect('/admin/dir');
     }
+    public function supprimer_encadrant(Request $request){
+         $this->validate($request, [
+            'supp_id' => 'required'
+             ]);
+        DB::table('encadrants')->where('id', $request->supp_id)->delete();
+        
+        return redirect('/admin/dir');
+    }
+     public function supprimer_doctorant(Request $request){
+         $this->validate($request, [
+            'supp_id' => 'required'
+             ]);
+        DB::table('users')->where('id', $request->supp_id)->delete();
+        
+        return redirect('/admin/doc');
+
+    }
+
+    public function modifie_soutenance(Request $request){
+        
+       $this->validate($request, [
+            'idU' => 'required',
+            'date' => '',
+            'heure' => '',
+            'amphi' => '',
+            'jury' => '',
+        ]);
+       
+            $data = Soutenance::find($request->idU);
+            if($request->date) $data->date = $request->date;
+            if($request->heure) $data->heure = $request->heure;
+            if($request->amphi) $data->amphi = $request->amphi;
+            if($request->jury) $data->jury = $request->jury;
+            DB::table('soutenances')->where('id',$request->idU)->update([
+                        'date' => $request->date,
+                        'heure' => $request->heure,
+                        'amphi' => $request->amphi,
+                        'jury' => $request->jury
+    
+            ]);
+
+            return redirect('admin/soutenances');
+    }
+
+
+
+
 }

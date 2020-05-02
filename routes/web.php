@@ -63,11 +63,17 @@ Route::post('/admin/login','Auth\AdminLoginController@login')->name('admin.login
 
 Route::get('/admin/theses','AdminController@these')->name('admin.theses');
 Route::post('/admin/theses','AdminController@store_these');
+Route::post('/admin/theses/s','AdminController@supprimer_these');
 Route::get('/admin/doc','AdminController@doctorants');
+Route::post('/admin/doc/m','AdminController@modifie_doctorants');
 Route::get('/admin/dir','AdminController@directeurs');
 Route::post('/admin/dir','AdminController@store_encadrant');
+Route::post('/admin/dir/s','AdminController@supprimer_encadrant');
+Route::post('/admin/doc/s','AdminController@supprimer_doctorant');
+Route::post('/admin/soutenances/s','AdminController@supprimer_soutenance');
 Route::get('/admin/soutenances','AdminController@soutenances');
 Route::get('/admin','AdminController@index')->name('admin.dashboard');
+Route::post('/admin/soutenances/m','AdminController@modifie_soutenance');
 
 
 
