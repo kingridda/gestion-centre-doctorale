@@ -87,7 +87,7 @@
                 background-position: center center;
                 background-size: cover;
                 height:300px;}
-
+            
         </style>
     </head>
     <body>
@@ -112,46 +112,57 @@
                     Nos filiere
                 </div>
                 <div class="row row-content">
-                    <img src="img/logiciel.png" style="border-radius:100%" width="300px" >
+                	<div class="col-sm-4 col-12 ">
+                    <img src="img/logiciel.png" style="border-radius:100%" width="15%" >
                         
                             <h3>Génie logiciel</h3> 
                       <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                  </div>
                 </div>
                 <div class="row row-content">
-                    <img src="img/info_decision.png" style="border-radius:100%" width="300px">
+                	<div class="col-sm-4 col-12 ">
+                    <img src="img/info_decision.png" style="border-radius:100%" width="15%">
             
                     <h3>Informatique décisionnelle</h3>
                      <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                	 </div>
                 </div>
                 <div class="row row-content">
-                    <img src="img/reseau.png" style="border-radius:100%" width="300px">
+                	<div class="col-sm-4 col-12 ">
+                    <img src="img/reseau.png" style="border-radius:100%" width="15%">
     
                     <h3>Réseaux et télécommunications</h3>
                      <br>
                       <p> nssar maxi rajl et merci....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                      </div>
                 </div>
                 <div class="row row-content">
             
-  
-                     <img src="img/elec.png" style="border-radius:100%" width="300px" >
+  					<div class="col-sm-4 col-12 ">
+                     <img src="img/elec.png" style="border-radius:100%" width="15%" >
                 
                     <h3>Génie électrique</h3> 
                     <br>
                     <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                    </div>
                 </div>
                 <div class="row row-content">
-                    <img src="img/genie_meca.png" style="border-radius:100%" width="300px">
+                	<div class="col-sm-4 col-12 ">
+                    <img src="img/genie_meca.png" style="border-radius:100%" width="15%">
             
                     <h3>Génie mécanique</h3>
                     <br>
                     <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa     aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                    </div>
                 </div>
                 <div class="row row-content">
-                    <img src="img/ener_env.png" style="border-radius:100%" width="300px">
+                	<div class="col-sm-4 col-12 ">
+                    <img src="img/ener_env.png" style="border-radius:100%" width="15%">
     
                     <h3>Génie Energétique et Environnement</h3>
                     <br>   
                     <p> nssar maxi rajl et merci....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                	</div>
                  </div>
             
             </div>
