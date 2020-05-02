@@ -71,33 +71,32 @@
 			
 			?>
 			
-			<div class="col-lg-8 ml-5 mt-4 " style="word-spacing: 1rem " >
+			<div class="col-lg-12 ml-5 mt-4 " style="word-spacing: 1rem " >
 				<table class="table">
 					<tbody>
 				<centre>
-				<h2>
 				<tr>
-					<th scope="col">Cin</th>
-					<th scope="col">{{$user->cin}}</th>
+					<th scope="col"><h2>Cin</h2></th>
+					<th scope="col"><h2>{{$user->cin}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col">Email</th>
-					<th scope="col">{{$user->email}}</th>
+					<th scope="col"><h2>Email</h2></th>
+					<th scope="col"><h2>{{$user->email}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col">Adresse</th>
-					<th scope="col">{{$user->adresse}}</th>
+					<th scope="col"><h2>Adresse</h2></th>
+					<th scope="col"><h2>{{$user->adresse}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col">Ville</th>
-					<th scope="col">{{$user->ville}}</th>
+					<th scope="col"><h2>Ville</h2></th>
+					<th scope="col"><h2>{{$user->ville}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col">Encadrant</th>
-					<th scope="col">{{$user->encadrant_id}}</th>
+					<th scope="col"><h2>Encadrant</h2></th>
+					<th scope="col"><h2>{{$user->encadrant_id}}</h2></th>
 				</tr>
-					<th scope="col">Boursier</th>
-					<th scope="col">{{$boursier}}</th>
+					<th scope="col"><h2>Boursier</h2></th>
+					<th scope="col"><h2>{{$boursier}}</h2></th>
 				</h2>
 			</centre>
 			</tr>
