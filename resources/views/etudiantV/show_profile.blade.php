@@ -60,38 +60,51 @@
 				</center>
 			</div>
 
-			<div class="col-lg-6 ml-3 mt-4 " >
-				
-				<h2> 
-					Cin  
-					<br>
-				
-					Email  
-					<br>
-				
-					Adresse	 
-					<br>
-				
-					Ville  
-					<br>
-				
-					Encadrant 
-				
-					: {{$user->cin}}
-					<br>
-				
-					: {{$user->email}}
-					<br>
-				
-					: {{$user->adresse}}
-					<br>
-				
-					: {{$user->ville}}
-					<br>
-				
-					: {{$user->encadrant_id}}
-				
+			<?php
+			if ($user->salarie==0)
+			{
+				$boursier = "non boursier" ;
+			}
+			else {
+				$boursier = "boursier";
+			}
+			
+			?>
+			
+			<div class="col-lg-12 ml-5 mt-4 " style="word-spacing: 1rem " >
+				<table class="table">
+					<tbody>
+				<centre>
+				<tr>
+					<th scope="col"><h2>Cin</h2></th>
+					<th scope="col"><h2>{{$user->cin}}</h2></th>
+				</tr>
+				<tr>
+					<th scope="col"><h2>Email</h2></th>
+					<th scope="col"><h2>{{$user->email}}</h2></th>
+				</tr>
+				<tr>
+					<th scope="col"><h2>Adresse</h2></th>
+					<th scope="col"><h2>{{$user->adresse}}</h2></th>
+				</tr>
+				<tr>
+					<th scope="col"><h2>Ville</h2></th>
+					<th scope="col"><h2>{{$user->ville}}</h2></th>
+				</tr>
+				<tr>
+					<th scope="col"><h2>Encadrant</h2></th>
+					<th scope="col"><h2>{{$user->encadrant_id}}</h2></th>
+				</tr>
+					<th scope="col"><h2>Boursier</h2></th>
+					<th scope="col"><h2>{{$boursier}}</h2></th>
 				</h2>
+			</centre>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+
+			</div>
 			</div>
 		</div>
 	</div>

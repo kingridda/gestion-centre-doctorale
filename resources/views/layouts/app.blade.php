@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<<<<<<< HEAD
     <style>
         html, body {
                 background-color: #fff;
@@ -46,14 +47,44 @@
             }
             
     </style>
+=======
+>>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
 </head>
 <body>
-    <div id="app">
+    <div id="app" class ="app_body" >
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+<<<<<<< HEAD
+=======
+
+                <ul class="navbar-nav">               <!-- Navbar tabs-->
+                  <li class="nav-item" role="tablist">
+                    <a class="nav-link" href="/show"  >Profile</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Envoyer</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/profile/encm">Encadrant</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="/profile/compte_rendu">Compte Rendu</a>
+                    </div>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/profile/encm/show">Messages</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/forum">Forum</a>
+                  </li>
+
+                </ul>
+
+>>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -106,9 +137,26 @@
             @yield('content')
         </main>
     </div>
+<<<<<<< HEAD
      <footer  class="footer" >
             <div class="footer-margin">   
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+=======
+</body>
+
+
+
+
+<!-- Footer -->
+    <footer class="page-footer font-small bg-dark text-white footer" >
+    
+      <!-- Footer Links -->
+      <div class="container">
+
+          <!-- Grid column -->
+          <div class="col-md-12 mt-0 py-3 text-center">
+            <p style="line-height: 1rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+>>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
               accusantium doloremque laudantium, totam rem
               aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
               explicabo.
@@ -117,6 +165,18 @@
                     <a href="#"> GCD.com</a>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-0">© 2020 Copyright:
+        <a href="https://google.com"> GCD.com</a>
+      </div>
+      <!-- Copyright -->
+
+>>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
     </footer>
 </body>
 </html>
