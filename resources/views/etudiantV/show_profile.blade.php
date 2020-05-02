@@ -60,38 +60,39 @@
 				</center>
 			</div>
 
-			<div class="col-lg-6 ml-3 mt-4 " >
-				
-				<h2> 
-					Cin  
-					<br>
-				
-					Email  
-					<br>
-				
-					Adresse	 
-					<br>
-				
-					Ville  
-					<br>
-				
-					Encadrant 
-				
-					: {{$user->cin}}
-					<br>
-				
-					: {{$user->email}}
-					<br>
-				
-					: {{$user->adresse}}
-					<br>
-				
-					: {{$user->ville}}
-					<br>
-				
-					: {{$user->encadrant_id}}
-				
+			<div class="col-lg-8 ml-5 mt-4 " style="word-spacing: 2rem " >
+				<table class="table">
+					<tbody>
+				<centre>
+				<h2>
+				<tr>
+					<th scope="col">Cin</th>
+					<th scope="col">{{$user->cin}}</th>
+				</tr>
+				<tr>
+					<th scope="col">Email</th>
+					<th scope="col">{{$user->email}}</th>
+				</tr>
+				<tr>
+					<th scope="col">Adresse</th>
+					<th scope="col">{{$user->adresse}}</th>
+				</tr>
+				<tr>
+					<th scope="col">Ville</th>
+					<th scope="col">{{$user->ville}}</th>
+				</tr>
+				<tr>
+					<th scope="col">Encadrant</th>
+					<th scope="col">{{$user->encadrant_id}}</th>
+				</tr>
 				</h2>
+			</centre>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+
+			</div>
 			</div>
 		</div>
 	</div>

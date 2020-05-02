@@ -49,10 +49,6 @@
                     <a class="nav-link" href="/forum">Forum</a>
                   </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="/profile/dirm">Direction</a>
-                  </li>
-
                 </ul>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
