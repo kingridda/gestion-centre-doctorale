@@ -27,6 +27,10 @@ class EncadrantController extends Controller
     {
         return view('encadrantV.encadrant');
     }
+    public function show_profile()
+    {
+        return view('encadrantV.show_profile')->with('encadrant', Auth::user());
+    }
 
     public function env_message_show(){
         return view('encadrantV.env_message')->with('users',Auth::user()->users);
