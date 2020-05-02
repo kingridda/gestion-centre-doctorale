@@ -39,7 +39,7 @@
             </div>
         </aside>
         <div class="col-8">
-            <div class="title">post title</div>
+            <div class="title"><h1>Bienvenu à votre session</h1></div>
             <p> description</p>
             <div>
             <img src="im.png" style="width: 600px;" /></div>

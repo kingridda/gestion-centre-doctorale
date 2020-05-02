@@ -60,7 +60,18 @@
 				</center>
 			</div>
 
-			<div class="col-lg-8 ml-5 mt-4 " style="word-spacing: 2rem " >
+			<?php
+			if ($user->salarie==0)
+			{
+				$boursier = "non boursier" ;
+			}
+			else {
+				$boursier = "boursier";
+			}
+			
+			?>
+			
+			<div class="col-lg-8 ml-5 mt-4 " style="word-spacing: 1rem " >
 				<table class="table">
 					<tbody>
 				<centre>
@@ -85,6 +96,8 @@
 					<th scope="col">Encadrant</th>
 					<th scope="col">{{$user->encadrant_id}}</th>
 				</tr>
+					<th scope="col">Boursier</th>
+					<th scope="col">{{$boursier}}</th>
 				</h2>
 			</centre>
 			</tr>
