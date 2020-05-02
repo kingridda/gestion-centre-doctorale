@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Rapport;
 use App\Soutenance;
 use App\Message;
-
+use DB;
 class ProfileController extends Controller
 {
         
