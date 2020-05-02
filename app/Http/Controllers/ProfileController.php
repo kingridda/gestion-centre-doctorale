@@ -15,7 +15,16 @@ class ProfileController extends Controller
         return view('etudiantV.show_profile')->withUser(Auth::user());
     }
     public function change_avatar(Request $request){
-        dd($request);
+        $this->validate($request, [
+            'image' => 'required|max:2000|image'
+        ]);
+        
+        $ImagePath = request('image')->store('uploads', 'public');        
+        
+        DB::table('users')
+              ->where('id', Auth::user()->id)
+              ->update(['avatar' => $ImagePath]);
+              
         return redirect('/show');
     }
 
