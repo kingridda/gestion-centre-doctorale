@@ -19,6 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1909c0a11741e5d642aecf42d592e24333fb95be
     <style>
         html, body {
                 background-color: #fff;
@@ -47,16 +50,20 @@
             }
             
     </style>
+<<<<<<< HEAD
 =======
 >>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
+=======
+>>>>>>> 1909c0a11741e5d642aecf42d592e24333fb95be
 </head>
 <body>
-    <div id="app" class ="app_body" >
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -85,6 +92,8 @@
                 </ul>
 
 >>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
+=======
+>>>>>>> 1909c0a11741e5d642aecf42d592e24333fb95be
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -138,6 +147,7 @@
         </main>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
      <footer  class="footer" >
             <div class="footer-margin">   
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -157,6 +167,11 @@
           <div class="col-md-12 mt-0 py-3 text-center">
             <p style="line-height: 1rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
 >>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
+=======
+     <footer  class="footer" >
+            <div class="footer-margin">   
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+>>>>>>> 1909c0a11741e5d642aecf42d592e24333fb95be
               accusantium doloremque laudantium, totam rem
               aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
               explicabo.
@@ -165,6 +180,7 @@
                     <a href="#"> GCD.com</a>
             </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -177,6 +193,8 @@
       <!-- Copyright -->
 
 >>>>>>> abd4c83d8531ac1a36401f7c01bc21749241a75e
+=======
+>>>>>>> 1909c0a11741e5d642aecf42d592e24333fb95be
     </footer>
 </body>
 </html>
