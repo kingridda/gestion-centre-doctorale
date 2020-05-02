@@ -19,15 +19,16 @@ return view('auth.disting_salarie');
 
 
 //etudiant
-Route::get('/home', function () {
-    return redirect('/profile');
-});
+
 
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return redirect('/profile');
+});
 Route::get('/show', 'ProfileController@show_profile');
 Route::post('/show', 'ProfileController@change_avatar');
 Route::get('/profile/encm/show', 'ProfileController@show_messages');
@@ -41,11 +42,8 @@ Route::post('/profile/soutenance/', 'ProfileController@env_demande_soutenance');
 Route::get('/profile/compte_rendu','ProfileController@form_compte_rendu');
 Route::post('/profile/compte_rendu','ProfileController@env_compte_rendu');
 Route::get('/profile/compte_rendu/show','ProfileController@show_compte_rendu');
+Route::get('/profile', 'ProfileController@index');
 
-
-Route::get('/profile', function(){
-	return view('etudiantV.profile');
-});
 
 Auth::routes();
 
@@ -101,6 +99,5 @@ Route::post('/forum/{id}','ForumController@store_response');
 
 
 
-//Route::get('/home', 'HomeController@index')->name('home');
 
 

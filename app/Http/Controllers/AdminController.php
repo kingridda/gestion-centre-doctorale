@@ -9,6 +9,7 @@ use App\These;
 use App\User;
 use App\Encadrant;
 use App\Soutenance;
+use DB;
 
 class AdminController extends Controller
 {
@@ -37,11 +38,17 @@ class AdminController extends Controller
     public function doctorants(){
         return view('adminV.docs')->withDocs(User::all());
     }
+    public function changer_doctorant(Request $request){
+        DB::table('users');
+
+        return view('adminV.docs')->withDocs(User::all());
+    }
     public function directeurs(){
         return view('adminV.directeurs')->withEncadrants(Encadrant::all());
     }
     public function soutenances(){
-        return view('adminV.soutenances')->withSoutenances(Soutenance::all());
+        return view('adminV.soutenances')->with(['soutenances'=> Soutenance::all(),
+                                                 'users' => User::all() ]);
     }
 
     public function store_these(Request $request){

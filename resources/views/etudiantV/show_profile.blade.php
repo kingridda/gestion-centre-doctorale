@@ -5,7 +5,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Changer la photo </h4>
+                    <h4 class="modal-title">Changer la photo</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -38,7 +38,7 @@
 		<div class="row row-content mt-5">
 			<div class="col-lg-4 " >
 				<center>
-				<img src="storage/{{ $user->avatar }}" style="border-radius:100% ">
+				<img src="/storage/{{ $user->avatar }}" style="border-radius:100% ">
 				<div>
 					<div><a class="btn btn-primary" data-toggle="modal" data-target="#addP"> Changer la photo</a></div>
 				</div>
@@ -61,7 +61,7 @@
 			</div>
 
 			<?php
-			if ($user->salarie==0)
+			if ($user->salarie == 0)
 			{
 				$boursier = "non boursier" ;
 			}

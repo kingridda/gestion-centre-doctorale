@@ -13,7 +13,6 @@
                 <option value="/profile/compte_rendu/show">Mes comptes rendu</option>
                 <option value="/forum">Forum</option>
                 <option value="/profile/soutenance"> Demmande de soutenance</option>
-                <option value="/profile/dirm">Direction</option>
             </select>
         </div>
     </div>
@@ -32,7 +31,6 @@
                             <li><a href="/profile/compte_rendu/show">Mes comptes rendu</a></li>
                             <li><a href="/forum">Forum</a></li>
                             <li><a href="/profile/soutenance"> Demmande de soutenance</a></li>
-                            <li><a href="/profile/dirm">Direction</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->

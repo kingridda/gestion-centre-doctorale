@@ -8,9 +8,12 @@ use App\Rapport;
 use App\Soutenance;
 use App\Message;
 use DB;
+
 class ProfileController extends Controller
 {
-        
+    public function index(){
+        return view('etudiantV.profile');
+    }
     public function show_profile(){
         return view('etudiantV.show_profile')->withUser(Auth::user());
     }
