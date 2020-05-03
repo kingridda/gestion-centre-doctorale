@@ -38,7 +38,7 @@ class EncadrantController extends Controller
 
     public function show_messages(){
 
-        if(Auth::user()->users->count()){
+        if(Auth::user()->users->count() && Auth::user()->messages->count() ){
         return view('encadrantV.see_messages')->with(['messages'=>Auth::user()->messages,
                                                         'users' =>Auth::user()->users]);
         }
