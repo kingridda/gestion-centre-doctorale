@@ -127,12 +127,20 @@ class AdminController extends Controller
             'name' => 'required|string|max:30',
             'cin' => 'required|max:15|string',
             'email' => 'required|email',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8',
+            'job_title' => 'max:190',
+            'avatar' => 'image'
              ]);
+         $path = null;
+         if($request->avatar){
+            $path = request('avatar')->store('uploads', 'public'); 
+         }
         Encadrant::create([
             'name' => $request->name,
             'cin' => $request->cin,
             'email' => $request->email,
+            'job_title' => $request->job_title,
+            'avatar' => $path,
             'password' => Hash::make($request->password)
         ]);
         
@@ -205,7 +213,7 @@ class AdminController extends Controller
 
 
     public function show_supprimer_liaison(){
-        return view('adminV.liaison',['users' => DB::table('users')->get(),
+        return view('adminV.supprimer_liaison',['users' => DB::table('users')->get(),
                                             'encadrants' => DB::table('encadrants')->get(),
                                             'theses' => DB::table('theses')->get()
                                     ]);
@@ -218,7 +226,7 @@ class AdminController extends Controller
                                                     'encadrant_id'=> null,
                                                     'these_id' => null
                                                 ]);
-        return redirect('/admin/liaison');
+        return redirect('/admin/liaison/s');
     }
 
 

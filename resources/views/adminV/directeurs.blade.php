@@ -10,7 +10,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="/admin/dir"  method="POST">
+                    <form action="/admin/dir" enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">nom complet</label>
@@ -42,6 +42,30 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required autofocus>
 
                                 @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="job_title" class="col-md-4 col-form-label text-md-right">description de directeur de thèse (optionel)</label>
+                            <div class="col-md-6">
+                                <input id="job_title" type="text" class="form-control @error('job_title') is-invalid @enderror" name="job_title"  autofocus>
+
+                                @error('job_title')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right">Photo (optionel)</label>
+                            <div class="col-md-6">
+                                <input id="avatar" type="file" class="form-control-file @error('avatar') is-invalid @enderror" name="avatar"  autofocus>
+
+                                @error('avatar')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
