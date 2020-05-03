@@ -18,7 +18,7 @@
 		      <th scope="row">vu</th>		     
 		      <td>{{$users->find($message->user_id)->name}}</td>
 		      <td>{{$users->find($message->user_id)->prenom}}</td>
-		      <td><a href="/profile/encm/show/{{$message->id}}">{{$message->objet}}</a></td>
+		      <td><a href="/encadrant/env_message/show/{{$message->id}}">{{$message->objet}}</a></td>
 		      <td>{{$message->created_at}}</td>
 
 	    	</tr>
