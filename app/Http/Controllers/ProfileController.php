@@ -10,7 +10,12 @@ use App\Message;
 use DB;
 
 class ProfileController extends Controller
-{
+{   
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
         return view('etudiantV.profile');
     }
@@ -37,7 +42,15 @@ class ProfileController extends Controller
     }
 
     public function show_messages(){
+        if(Auth::user()->messages->count()){
         return view('etudiantV.see_messages')->with('messages',Auth::user()->messages);
+        }
+        else return view('etudiantV.see_messages'); 
+
+    }
+    public function show_one_messages(){
+
+        return view('etudiantV.see_one_message')->with('message', Message::find(request('id')));
     }
 
     public function env_message(Request $request){

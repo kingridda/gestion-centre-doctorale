@@ -14,8 +14,23 @@
                 <option value="admin/liaison/s">supprimer une liaisone thèse-doctorant</option>
             </select>
         </div>
+<<<<<<< HEAD
+    </div>
+</div>
+<div class="container">
+    <div class="row row-content">
+
+        <div class="col-2">
+            <div><a href="admin/theses">voir les theses en cours</a></div>
+            <div><a href="admin/dir">voir la list des directeurs des thèses</a></div>
+            <div><a href="admin/doc">voir la list des doctorants</a></div>
+            <div><a href="admin/soutenances">voir les demandes de soutenance</a></div>
+            <div><a href="admin/liaison">lier les theses au doctorants</a></div>
+            <div><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></div>
+=======
     
 
+>>>>>>> 122889b3f5d643afa0da9e6be7fd3dcfbf87df07
 
         <aside class="sidebar col-lg-4 col-md-4 col-xs-12 mb-5">
             <div class="dynamicDiv" >
