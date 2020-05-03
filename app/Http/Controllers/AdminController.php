@@ -214,8 +214,6 @@ class AdminController extends Controller
 
     public function show_supprimer_liaison(){
         return view('adminV.supprimer_liaison',['users' => DB::table('users')->get(),
-                                            'encadrants' => DB::table('encadrants')->get(),
-                                            'theses' => DB::table('theses')->get()
                                     ]);
     }
     public function supprimer_liaison(Request $request){

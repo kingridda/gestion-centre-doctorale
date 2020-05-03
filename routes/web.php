@@ -32,6 +32,7 @@ Route::get('/home', function () {
 Route::get('/show', 'ProfileController@show_profile');
 Route::post('/show', 'ProfileController@change_avatar');
 Route::get('/profile/encm/show', 'ProfileController@show_messages');
+Route::get('/profile/encm/show/{id}','ProfileController@show_one_messages');
 Route::post('/profile/encm', 'ProfileController@env_message');
 Route::get('/profile/encm/', 'ProfileController@env_message_show');
 Route::get('/profile/soutenance/', 'ProfileController@demande_soutenance');
@@ -96,6 +97,7 @@ Route::get('/encadrant/env_message','EncadrantController@env_message_show');
 Route::post('/encadrant/env_message','EncadrantController@env_message');
 Route::get('/encadrant/compte_rendu','EncadrantController@show_comptes_rendu');
 Route::get('/encadrant/env_message/show','EncadrantController@show_messages');
+Route::get('/encadrant/env_message/show/{id}','EncadrantController@show_one_messages');
 Route::get('/encadrant/show_profile','EncadrantController@show_profile');
 
 

@@ -12,19 +12,20 @@
 	    	</tr>
 	  	</thead>
 	  	<tbody>
+	  		@isset($messages)
 	  		@foreach($messages as $message)
-<<<<<<< HEAD
 	    	<tr>
 		      <th scope="row">#</th>		     
-=======
 	    	<tr>		     
->>>>>>> 4a9f5731b1eca1b508e750b9de441f9c0f803c6c
 		      <td>{{$message->created_at}}</td>
 		      <td>{{$message->objet}}</td>
 		      <td>{{$message->contenu}}</td>
 		      <th scope="row">vu</th>
 	    	</tr>
 	    	@endforeach
+	    	@else
+	    	no message available
+	    	@endisset
 		</tbody>
 	</table>
 </div>

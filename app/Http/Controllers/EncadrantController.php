@@ -44,6 +44,10 @@ class EncadrantController extends Controller
         }
         return view('encadrantV.see_messages');
     }
+    public function show_one_messages(){
+
+        return view('encadrantV.see_one_messages')->with('message', Message::find(request('id')));
+    }
     public function env_message(Request $request){
         //validate data
 
