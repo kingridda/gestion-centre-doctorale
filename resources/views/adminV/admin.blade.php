@@ -10,8 +10,11 @@
                 <option value="admin/dir">List des directeurs des thèses</option>
                 <option value="admin/doc">List des doctorants</option>
                 <option value="admin/soutenances">Demandes de soutenance</option>
+                <option value="admin/liaison">lier les theses au doctorants</option>
+                <option value="admin/liaison/s">supprimer une liaisone thèse-doctorant</option>
             </select>
         </div>
+<<<<<<< HEAD
     </div>
 </div>
 <div class="container">
@@ -24,6 +27,10 @@
             <div><a href="admin/soutenances">voir les demandes de soutenance</a></div>
             <div><a href="admin/liaison">lier les theses au doctorants</a></div>
             <div><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></div>
+=======
+    
+
+>>>>>>> 122889b3f5d643afa0da9e6be7fd3dcfbf87df07
 
         <aside class="sidebar col-lg-4 col-md-4 col-xs-12 mb-5">
             <div class="dynamicDiv" >
@@ -34,6 +41,8 @@
                             <li><a href="admin/dir">List des directeurs des thèses</a></li>            
                             <li><a href="admin/doc">List des doctorants</a></li>
                             <li><a href="admin/soutenances">Demandes de soutenance</a></li>
+                            <li><a href="admin/liaison">lier les theses au doctorants</a></li>
+                            <li><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->
@@ -48,8 +57,8 @@
            
 
         </div>
-        
-    </div>
-</div>
+  </div>
+</div>      
+
 
 @endsection

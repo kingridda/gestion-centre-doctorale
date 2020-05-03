@@ -147,7 +147,7 @@
       @endforeach
     </tbody>
   </table>
-    <div class="mb-2" style="color:#fff">
+    <div class="mb-2 d-flex justify-content-between" style="color:#fff">
         <a class="btn btn-primary" data-toggle="modal" data-target="#change">Valider ou modifie une Soutenance</a>
         <a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer une Soutenance</a>
     </div>
