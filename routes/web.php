@@ -74,6 +74,10 @@ Route::post('/admin/soutenances/s','AdminController@supprimer_soutenance');
 Route::get('/admin/soutenances','AdminController@soutenances');
 Route::get('/admin','AdminController@index')->name('admin.dashboard');
 Route::post('/admin/soutenances/m','AdminController@modifie_soutenance');
+Route::get('/admin/liaison','AdminController@show_liaison');
+Route::post('/admin/liaison','AdminController@submit_liaison');
+Route::get('/admin/liaison/s','AdminController@show_supprimer_liaison');
+Route::post('/admin/liaison/s','AdminController@supprimer_liaison');
 
 
 

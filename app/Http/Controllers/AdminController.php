@@ -182,7 +182,46 @@ class AdminController extends Controller
             return redirect('admin/soutenances');
     }
 
+    //liaisons
+    public function show_liaison(){
+        return view('adminV.liaison',['users' => DB::table('users')->whereNull('encadrant_id')
+                                                                    ->orWhereNull('these_id')->get(),
+                                            'encadrants' => DB::table('encadrants')->get(),
+                                            'theses' => DB::table('theses')->get()
+                                    ]);
+    }
+    public function submit_liaison(Request $request){
+        $this->validate($request, [
+            'user_id' => 'required',
+            'encadrant_id' => 'required',
+            'these_id' => 'required'
+             ]);
+        DB::table('users')->where('id', $request->user_id)->update([
+                                                    'encadrant_id'=> $request->encadrant_id,
+                                                    'these_id' => $request->these_id
+                                                ]);
+        return redirect('/admin/liaison');
+    }
 
+
+    public function show_supprimer_liaison(){
+        return view('adminV.liaison',['users' => DB::table('users')->get(),
+                                            'encadrants' => DB::table('encadrants')->get(),
+                                            'theses' => DB::table('theses')->get()
+                                    ]);
+    }
+    public function supprimer_liaison(Request $request){
+        $this->validate($request, [
+            'user_id' => 'required',
+            'encadrant_id' => 'required',
+            'these_id' => 'required'
+             ]);
+        DB::table('users')->where('id', $request->user_id)->update([
+                                                    'encadrant_id'=> null,
+                                                    'these_id' => null
+                                                ]);
+        return redirect('/admin/liaison');
+    }
 
 
 }

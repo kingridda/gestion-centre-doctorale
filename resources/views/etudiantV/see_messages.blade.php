@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+  
 <div class="container">
 	<table class="table">
 	  	<thead class="thead-dark">
@@ -12,7 +13,7 @@
 	  	<tbody>
 	  		@foreach($messages as $message)
 	    	<tr>
-		      <th scope="row">vu</th>		     
+		      <th scope="row">#</th>		     
 		      <td>{{$message->created_at}}</td>
 		      <td>{{$message->objet}}</td>
 	    	</tr>
@@ -20,4 +21,5 @@
 		</tbody>
 	</table>
 </div>
+
 @endsection
