@@ -92,6 +92,7 @@ Route::get('/encadrant/env_message','EncadrantController@env_message_show');
 Route::post('/encadrant/env_message','EncadrantController@env_message');
 Route::get('/encadrant/compte_rendu','EncadrantController@show_comptes_rendu');
 Route::get('/encadrant/env_message/show','EncadrantController@show_messages');
+Route::get('/encadrant/show_profile','EncadrantController@show_profile');
 
 
 //forum
