@@ -113,7 +113,7 @@
       @endforeach
     </tbody>
   </table>
-    <div class="mb-2" style="color:#ffffff">
+    <div class="mb-2 d-flex justify-content-between" style="color:#ffffff">
         <a class="btn btn-primary" data-toggle="modal" data-target="#addT">Ajouter une Thèse</a>
         <a class="btn btn-danger" data-toggle="modal" data-target="#SuppT">Supprimer une Thèse</a>
     </div>

@@ -10,21 +10,13 @@
                 <option value="admin/dir">List des directeurs des thèses</option>
                 <option value="admin/doc">List des doctorants</option>
                 <option value="admin/soutenances">Demandes de soutenance</option>
+                <option value="admin/liaison">lier les theses au doctorants</option>
+                <option value="admin/liaison/s">supprimer une liaisone thèse-doctorant</option>
             </select>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row row-content">
-<<<<<<< HEAD
-        <div class="col-2">
-            <div><a href="admin/theses">voir les theses en cours</a></div>
-            <div><a href="admin/dir">voir la list des directeurs des thèses</a></div>
-            <div><a href="admin/doc">voir la list des doctorants</a></div>
-            <div><a href="admin/soutenances">voir les demandes de soutenance</a></div>
-            <div><a href="admin/liaison">lier les theses au doctorants</a></div>
-            <div><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></div>
-=======
+    
+
+
         <aside class="sidebar col-lg-4 col-md-4 col-xs-12 mb-5">
             <div class="dynamicDiv" >
                 <div class="sidebar-wrapper">
@@ -34,6 +26,8 @@
                             <li><a href="admin/dir">List des directeurs des thèses</a></li>            
                             <li><a href="admin/doc">List des doctorants</a></li>
                             <li><a href="admin/soutenances">Demandes de soutenance</a></li>
+                            <li><a href="admin/liaison">lier les theses au doctorants</a></li>
+                            <li><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->
@@ -46,10 +40,10 @@
             <img src="im.png" style="width: 600px;" /></div>
             <div class="telecharger"> <a href="#">telecharger attachment</a></div>
            
->>>>>>> 4a9f5731b1eca1b508e750b9de441f9c0f803c6c
+
         </div>
-        
-    </div>
-</div>
+  </div>
+</div>      
+
 
 @endsection
