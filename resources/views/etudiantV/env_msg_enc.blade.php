@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="textAlign: center; fontWeight: bold;">Envoyer message à l'encadrant</div>
+                <div class="card-header" style="textAlign: center; fontWeight: bold;">Envoyer un message à l'encadrant</div>
 
                 <div class="card-body">
                     <form method="POST" action="/profile/encm">
@@ -37,8 +37,8 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="row pt-4 col-md-4 col-form-label" >
-                                <button class="btn btn-primary"> envoyer </button>
+                            <div class="row ml-3 col-md-4 col-form-label" >
+                                <button class="btn btn-primary"> Envoyer </button>
                             </div>
                         </div>
                     </form>

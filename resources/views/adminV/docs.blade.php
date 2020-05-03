@@ -135,7 +135,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header badge-danger">
-                    <h4 class="modal-title">!! Attention vous aller supprimer un ètudiant de cntre doctorale !! </h4>
+                    <h4 class="modal-title">!! Attention vous aller supprimer un doctorant du centre doctorale !! </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -166,10 +166,8 @@
 
 
 <div class="container">
-  <div class="mb-2"><a class="btn btn-primary" data-toggle="modal" data-target="#change">Changer les données d'un étudiant</a></div>
-  <div class="mb-2"><a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer les données d'un doctorant</a></div>
 	<table class="table">
-    <thead class="thead-dark">
+    <thead class="thead-dark table-striped">
       <tr>
         <th scope="col">identifiant</th>
         <th scope="col">domaine</th>
@@ -188,6 +186,10 @@
       @endforeach
     </tbody>
   </table>
+    <div class="mb-2" style="color:#ffffff">
+        <a class="btn btn-primary" data-toggle="modal" data-target="#change">Changer les données d'un doctorant</a>
+        <a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer un doctorant</a>
+    </div>
 
 </div>
 @endsection

@@ -127,10 +127,7 @@
  
 
 <div class="container">
-  <div class="mb-2"><a class="btn btn-primary" data-toggle="modal" data-target="#change">Valider ou modifie une Soutenance</a></div>
-   <div class="mb-2"><a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer une Soutenance</a></div>
-
-	<table class="table">
+	<table class="table table-striped">
     <thead class="thead-dark">
       <tr>
         <th scope="col">identifiant</th>
@@ -150,6 +147,10 @@
       @endforeach
     </tbody>
   </table>
+    <div class="mb-2" style="color:#fff">
+        <a class="btn btn-primary" data-toggle="modal" data-target="#change">Valider ou modifie une Soutenance</a>
+        <a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer une Soutenance</a>
+    </div>
 
 </div>
 @endsection

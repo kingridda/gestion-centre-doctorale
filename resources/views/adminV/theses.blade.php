@@ -90,12 +90,10 @@
             </div>
       </div>
 </div>
-
 <div class="container">
-  <div class="mb-2"><a class="btn btn-primary" data-toggle="modal" data-target="#addT">Ajouter une Thèse</a></div>
-  <div class="mb-2"><a class="btn btn-danger" data-toggle="modal" data-target="#SuppT">Supprimer une Thèse</a></div>
   
-	<table class="table">
+  
+	<table class="table table-striped">
     <thead class="thead-dark">
       <tr>
         <th scope="col">identifiant</th>
@@ -115,6 +113,9 @@
       @endforeach
     </tbody>
   </table>
-
+    <div class="mb-2" style="color:#ffffff">
+        <a class="btn btn-primary" data-toggle="modal" data-target="#addT">Ajouter une Thèse</a>
+        <a class="btn btn-danger" data-toggle="modal" data-target="#SuppT">Supprimer une Thèse</a>
+    </div>
 </div>
 @endsection

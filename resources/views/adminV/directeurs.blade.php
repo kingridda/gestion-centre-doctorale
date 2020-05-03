@@ -107,9 +107,7 @@
 </div>
 
 <div class="container">
-  <div class="mb-2"><a class="btn btn-primary" data-toggle="modal" data-target="#addE">Ajouter une Encadrant</a></div>
-  <div class="mb-2"><a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer un Encadrant</a></div>
-	<table class="table">
+	<table class="table table-striped">
     <thead class="thead-dark">
       <tr>
         <th scope="col">identifiant</th>
@@ -129,6 +127,8 @@
       @endforeach
     </tbody>
   </table>
-
-</div>
+    <div class="mb-2" style="color:#ffffff">
+        <a class="btn btn-primary" data-toggle="modal" data-target="#addE">Ajouter une Encadrant</a>
+        <a class="btn btn-danger" data-toggle="modal" data-target="#SuppD">Supprimer un Encadrant</a></div>
+    </div>
 @endsection

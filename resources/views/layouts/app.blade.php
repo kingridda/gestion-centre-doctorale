@@ -34,7 +34,8 @@
                 bottom: 0;
                 height: 10rem;            
                 margin: 0px auto;
-                background-color: #D1C4E9;
+                background-color: #8d8d8d;
+                color: #ffffff;
                     
                 
             }
@@ -75,11 +76,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/salarie">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="/salarie">{{ __("s'inscrire") }}</a>
                                 </li>
                             @endif
                         @else 
@@ -92,7 +93,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Se déconnecter') }}
                                     </a>
               
                                 
