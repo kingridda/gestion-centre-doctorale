@@ -57,7 +57,8 @@
                 bottom: 0;
                 height: 10rem;            
                 margin: 0px auto;
-                background-color: #D1C4E9;
+                background-color: #8d8d8d;
+                color: #ffffff;
                     
                 
             }
