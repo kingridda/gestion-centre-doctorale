@@ -56,9 +56,21 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @else
-                <a class="navbar-brand" href="/profile">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                    @auth('admin')
+                        <a class="navbar-brand" href="/admin">
+                        {{ config('app.name', 'Laravel') }}
+                        </a>
+                    @else 
+                        @auth('encadrant')
+                        <a class="navbar-brand" href="/encadrant">
+                            {{ config('app.name', 'Laravel') }}
+                        </a>
+                        @else
+                            <a class="navbar-brand" href="/profile">
+                            {{ config('app.name', 'Laravel') }}
+                            </a>
+                        @endauth
+                    @endauth
                 @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
