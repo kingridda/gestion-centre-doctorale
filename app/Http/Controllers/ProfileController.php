@@ -45,7 +45,7 @@ class ProfileController extends Controller
     }
     public function show_one_messages(){
 
-        return view('etudiantV.see_one_messages')->with('message', Message::find(request('id')));
+        return view('etudiantV.see_one_message')->with('message', Message::find(request('id')));
     }
 
     public function env_message(Request $request){

@@ -18,7 +18,7 @@
 		      <th scope="row">#</th>		     
 	    	<tr>		     
 		      <td>{{$message->created_at}}</td>
-		      <td>{{$message->objet}}</td>
+		      <td><a href="/profile/encm/show/{{$message->id}}">{{$message->objet}}</a></td>
 		      <td>{{$message->contenu}}</td>
 		      <th scope="row">vu</th>
 	    	</tr>
