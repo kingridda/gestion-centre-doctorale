@@ -213,8 +213,6 @@ class AdminController extends Controller
     public function supprimer_liaison(Request $request){
         $this->validate($request, [
             'user_id' => 'required',
-            'encadrant_id' => 'required',
-            'these_id' => 'required'
              ]);
         DB::table('users')->where('id', $request->user_id)->update([
                                                     'encadrant_id'=> null,

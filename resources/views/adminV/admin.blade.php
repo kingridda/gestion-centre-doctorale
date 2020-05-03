@@ -16,7 +16,7 @@
 </div>
 <div class="container">
     <div class="row row-content">
-<<<<<<< HEAD
+
         <div class="col-2">
             <div><a href="admin/theses">voir les theses en cours</a></div>
             <div><a href="admin/dir">voir la list des directeurs des thèses</a></div>
@@ -24,7 +24,7 @@
             <div><a href="admin/soutenances">voir les demandes de soutenance</a></div>
             <div><a href="admin/liaison">lier les theses au doctorants</a></div>
             <div><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></div>
-=======
+
         <aside class="sidebar col-lg-4 col-md-4 col-xs-12 mb-5">
             <div class="dynamicDiv" >
                 <div class="sidebar-wrapper">
@@ -46,7 +46,7 @@
             <img src="im.png" style="width: 600px;" /></div>
             <div class="telecharger"> <a href="#">telecharger attachment</a></div>
            
->>>>>>> 4a9f5731b1eca1b508e750b9de441f9c0f803c6c
+
         </div>
         
     </div>
