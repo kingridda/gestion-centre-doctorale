@@ -4,7 +4,7 @@
 		<div class="row row-content mt-5">
 			<div class="col-lg-4 " >
 				<center>
-				<img src="/storage/" style="border-radius:100%; width:80% ; ">
+				<img src="/storage/{{encadrant->avatar}}" style="border-radius:100%; width:80% ; ">
 			</center>
 
 			</div>
