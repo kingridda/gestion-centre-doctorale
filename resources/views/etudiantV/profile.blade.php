@@ -38,10 +38,12 @@
         </aside>
         <div class="col-8">
             <div class="title"><h1>Bienvenu à votre session</h1></div>
-            <p> description</p>
+            <div class="mt-5 title"><h2><strong>AVIS IMPORTANT</strong></h2></div>
+            <blockquote class="blockquote " style="word-spacing: 0.7rem; line-height: 200%; font-size: 1.75rem"> Le Centre d'Etudes Doctorales porte à la connaissance des étudiant(e)s admi(es) à la poursuivre des études de doctorat au titre de la nouvelle session 2021-2024 que le dernier delai d'inscription au Centre est fixe au jeudi 15 janvier 2021.
+            <footer class="blockquote-footer "><cite>Le Directeur</cite></footer>
+            </blockquote>
             <div>
-            <img src="im.png" style="width: 600px;" /></div>
-            <div class="telecharger"> <a href="#">telecharger attachment</a></div>
+            <div class="telecharger"> <a href="http://ensias.um5.ac.ma/sites/ensias.um5.ac.ma/files/Charte_the%C4%A2se.pdf?fbclid=IwAR3lfmMedYQrKGIL_rW-4A_vCEliDpHg1afIjot67Qf3MUTW5kT89Cjk_z0">Charte de la thèse de doctorat</a></div>
            
         </div>
         

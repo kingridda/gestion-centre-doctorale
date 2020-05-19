@@ -10,28 +10,10 @@
                 <option value="admin/dir">List des directeurs des thèses</option>
                 <option value="admin/doc">List des doctorants</option>
                 <option value="admin/soutenances">Demandes de soutenance</option>
-                <option value="admin/liaison">lier les theses au doctorants</option>
-                <option value="admin/liaison/s">supprimer une liaisone thèse-doctorant</option>
+                <option value="admin/liaison">Lier les thèses au doctorants</option>
+                <option value="admin/liaison/s">Supprimer une liaisone thèse-doctorant</option>
             </select>
         </div>
-<<<<<<< HEAD
-    </div>
-</div>
-<div class="container">
-    <div class="row row-content">
-
-        <div class="col-2">
-            <div><a href="admin/theses">voir les theses en cours</a></div>
-            <div><a href="admin/dir">voir la list des directeurs des thèses</a></div>
-            <div><a href="admin/doc">voir la list des doctorants</a></div>
-            <div><a href="admin/soutenances">voir les demandes de soutenance</a></div>
-            <div><a href="admin/liaison">lier les theses au doctorants</a></div>
-            <div><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></div>
-=======
-    
-
->>>>>>> 122889b3f5d643afa0da9e6be7fd3dcfbf87df07
-
         <aside class="sidebar col-lg-4 col-md-4 col-xs-12 mb-5">
             <div class="dynamicDiv" >
                 <div class="sidebar-wrapper">
@@ -41,8 +23,8 @@
                             <li><a href="admin/dir">List des directeurs des thèses</a></li>            
                             <li><a href="admin/doc">List des doctorants</a></li>
                             <li><a href="admin/soutenances">Demandes de soutenance</a></li>
-                            <li><a href="admin/liaison">lier les theses au doctorants</a></li>
-                            <li><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></li>
+                            <li><a href="admin/liaison">Lier les thèses au doctorants</a></li>
+                            <li><a href="admin/liaison/s">Supprimer une liaisone thèse-doctorant</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->
@@ -50,12 +32,68 @@
         </aside>
         <div class="col-8">
             <div class="title"><h1>Bienvenu à votre session</h1></div>
-            <p> description</p>
-            <div>
-            <img src="im.png" style="width: 600px;" /></div>
-            <div class="telecharger"> <a href="#">telecharger attachment</a></div>
-           
+            
+            <?php
 
+$dataPoints1 =$dict;
+$dataPoints2 = array(
+    array("label"=> "2010", "y"=> 64.61),
+    array("label"=> "2011", "y"=> 70.55),
+    array("label"=> "2012", "y"=> 72.50),
+    array("label"=> "2013", "y"=> 81.30),
+    array("label"=> "2014", "y"=> 63.60),
+    array("label"=> "2015", "y"=> 69.3328),
+    array("label"=> "2016", "y"=> 98.70)
+);
+    
+?>
+            <script>
+                window.onload = function () {
+                 
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    theme: "light2",
+                    title:{
+                        text: "Average Amount Spent on Real and Artificial X-Mas Trees in U.S."
+                    },
+                    legend:{
+                        cursor: "pointer",
+                        verticalAlign: "center",
+                        horizontalAlign: "right",
+                        itemclick: toggleDataSeries
+                    },
+                    data: [{
+                        type: "column",
+                        name: "Real Trees",
+                        indexLabel: "{y}",
+                      //  yValueFormatString: "$#0.##",
+                        showInLegend: true,
+                        dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
+                    },{
+                        type: "column",
+                        name: "Artificial Trees",
+                        indexLabel: "{y}",
+                         yValueFormatString: "$#0.##",
+                        showInLegend: true,
+                        dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+                    }]
+                });
+                chart.render();
+                 
+                function toggleDataSeries(e){
+                    if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                        e.dataSeries.visible = false;
+                    }
+                    else{
+                        e.dataSeries.visible = true;
+                    }
+                    chart.render();
+                }
+                 
+                }
+            </script>
+                <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
         </div>
   </div>
 </div>      
