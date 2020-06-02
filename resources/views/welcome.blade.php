@@ -22,7 +22,8 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                background: url('/img/background1.jpg') no-repeat center center fixed;
+                background: url('/img/background1.jpg') width no-repeat center fixed;
+
             }
 
             .full-height {

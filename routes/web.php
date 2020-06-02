@@ -16,6 +16,10 @@ Route::get('/salarie', function(){
 return view('auth.disting_salarie');
 });
 
+Route::get('/inscription', function(){
+	$pdf = PDF::loadView('inscription'/*, $data*/);
+	return $pdf->download('inscription.pdf');
+});
 
 
 //etudiant

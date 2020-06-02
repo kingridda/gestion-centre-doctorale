@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->index('encadrant_id');
             $table->string('avatar',100)->default('default.png');
+            $table->tinyint('validation')->default(0);
         });
     }
 
