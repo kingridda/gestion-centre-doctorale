@@ -6,7 +6,6 @@
 	<title>inscription</title>
 </head>
 <body>
-	
 	<div style="float: right;">
 	<img src="/storage/{{$data->avatar}}" width="100">
 	</div>

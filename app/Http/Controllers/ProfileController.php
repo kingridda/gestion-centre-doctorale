@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use PDF;
 use App\Rapport;
 use App\Soutenance;
 use App\Message;
@@ -22,9 +22,8 @@ class ProfileController extends Controller
     }
     public function preInscription(){
         $data = Auth::user();
-       /* $pdf = PDF::loadView('inscription', $data);
-        return $pdf->download('pre_inscription.pdf');*/
-        
+        //$pdf = PDF::loadView('inscription', compact('data',$data));
+        //return $pdf->download('pre_inscription.pdf');
         return view('inscription')->withData($data);
     }
     public function show_profile(){

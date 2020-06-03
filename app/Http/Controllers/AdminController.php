@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-
+use PDF;
 use App\These;
 use App\User;
 use App\Encadrant;
@@ -35,10 +35,9 @@ class AdminController extends Controller
 
     public function get_list_doctorant(){
         $data = DB::table('users')->where('validation', 1)->get();
-       /* $pdf = PDF::loadView('list_docs', $data);
-        return $pdf->download('list_doctorants.pdf');*/
+        $pdf = PDF::loadView('list_docs', $data);
+        return $pdf->download('list_doctorants.pdf');
         
-        return view('list_docs')->withData($data);
     }
     public function these(){
         return view('adminV.theses')->withTheses(These::all());
