@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row">
@@ -12,26 +11,13 @@
                 <option value="admin/soutenances">Demandes de soutenance</option>
                 <option value="admin/liaison">lier les theses au doctorants</option>
                 <option value="admin/liaison/s">supprimer une liaisone thèse-doctorant</option>
+                <option value="admin/validat">valider les nouvelles inscriptions</option>
             </select>
         </div>
-<<<<<<< HEAD
     </div>
 </div>
 <div class="container">
     <div class="row row-content">
-
-        <div class="col-2">
-            <div><a href="admin/theses">voir les theses en cours</a></div>
-            <div><a href="admin/dir">voir la list des directeurs des thèses</a></div>
-            <div><a href="admin/doc">voir la list des doctorants</a></div>
-            <div><a href="admin/soutenances">voir les demandes de soutenance</a></div>
-            <div><a href="admin/liaison">lier les theses au doctorants</a></div>
-            <div><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></div>
-=======
-    
-
->>>>>>> 122889b3f5d643afa0da9e6be7fd3dcfbf87df07
-
         <aside class="sidebar col-lg-4 col-md-4 col-xs-12 mb-5">
             <div class="dynamicDiv" >
                 <div class="sidebar-wrapper">
@@ -43,6 +29,7 @@
                             <li><a href="admin/soutenances">Demandes de soutenance</a></li>
                             <li><a href="admin/liaison">lier les theses au doctorants</a></li>
                             <li><a href="admin/liaison/s">supprimer une liaisone thèse-doctorant</a></li>
+                            <li><a href="admin/validat">valider les nouvelles inscriptions</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->
@@ -50,11 +37,6 @@
         </aside>
         <div class="col-8">
             <div class="title"><h1>Bienvenu à votre session</h1></div>
-            <p> description</p>
-            <div>
-            <img src="im.png" style="width: 600px;" /></div>
-            <div class="telecharger"> <a href="#">telecharger attachment</a></div>
-           
 
         </div>
   </div>

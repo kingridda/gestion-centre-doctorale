@@ -38,10 +38,16 @@
         </aside>
         <div class="col-8">
             <div class="title"><h1>Bienvenu à votre session</h1></div>
-            <p> description</p>
-            <div>
-            <img src="im.png" style="width: 600px;" /></div>
-            <div class="telecharger"> <a href="#">telecharger attachment</a></div>
+            @if($validation == 0)
+                <div class="alert">
+                    inscription n'est pas encore accepté
+                </div>
+                <div class="btn btn-danger">
+                    <a href="/inscription">telecharger le reçu de préinscription</a>
+                </div>
+            @else
+                Cedoc en votre service
+            @endif
            
         </div>
         

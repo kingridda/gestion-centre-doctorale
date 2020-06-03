@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 use App\Rapport;
 use App\Soutenance;
 use App\Message;
@@ -17,7 +18,14 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        return view('etudiantV.profile');
+        return view('etudiantV.profile')->with('validation', Auth::user()->validation);
+    }
+    public function preInscription(){
+        $data = Auth::user();
+       /* $pdf = PDF::loadView('inscription', $data);
+        return $pdf->download('pre_inscription.pdf');*/
+        
+        return view('inscription')->withData($data);
     }
     public function show_profile(){
         return view('etudiantV.show_profile')->withUser(Auth::user());
@@ -38,10 +46,12 @@ class ProfileController extends Controller
 
         //gestion des massages
     public function env_message_show(){
+        $this->authorize('viewAny');
         return view('etudiantV.env_msg_enc');
     }
 
     public function show_messages(){
+        $this->authorize('viewAny');
         if(Auth::user()->messages->count()){
         return view('etudiantV.see_messages')->with('messages',Auth::user()->messages);
         }
@@ -49,14 +59,14 @@ class ProfileController extends Controller
 
     }
     public function show_one_messages(){
-
+        $this->authorize('viewAny');
         return view('etudiantV.see_one_message')->with('message', Message::find(request('id')));
     }
 
     public function env_message(Request $request){
         //validate data
 
-     
+        $this->authorize('viewAny');
 
         $this->validate($request, [
             'title' => 'required|string|max:150',
@@ -79,14 +89,17 @@ class ProfileController extends Controller
         //gestion du compte rendu
 
         public function form_compte_rendu(){
+            $this->authorize('viewAny');
             return view('etudiantV.env_compte_rendu');
         }
         public function show_compte_rendu(){
+            $this->authorize('viewAny');
             return view('etudiantV.show_compte_rendu')->with('crs',Auth::user()->rapports);
         }
 
         
         public function env_compte_rendu(Request $request){
+            $this->authorize('viewAny');
 
             $this->validate($request, [
             'title' => 'required|string|max:30',
@@ -107,10 +120,12 @@ class ProfileController extends Controller
 
         //SOUTENANCE
         public function demande_soutenance(){
+            $this->authorize('viewAny');
             return view('etudiantV.demande_soutenance');
         }
 
         public function env_demande_soutenance(Request $request){
+            $this->authorize('viewAny');
             $this->validate($request, [
             'attachments' => 'required|max:2000|mimes:pdf,doc,docx,zip,rar'
         ]);

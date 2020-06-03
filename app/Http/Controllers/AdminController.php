@@ -32,11 +32,24 @@ class AdminController extends Controller
     {
         return view('adminV.admin');
     }
+
+    public function get_list_doctorant(){
+        $data = DB::table('users')->where('validation', 1)->get();
+       /* $pdf = PDF::loadView('list_docs', $data);
+        return $pdf->download('list_doctorants.pdf');*/
+        
+        return view('list_docs')->withData($data);
+    }
     public function these(){
         return view('adminV.theses')->withTheses(These::all());
     }
     public function doctorants(){
         return view('adminV.docs')->withDocs(User::all());
+    }
+
+    public function add_new_inscription(){
+        return view('adminV.new_inscriptions',['users' => DB::table('users')->where('validation', 0)->get()]);
+    
     }
 
     public function modifie_doctorants(Request $request){

@@ -38,7 +38,7 @@
 		<div class="row row-content mt-5">
 			<div class="col-lg-4 " >
 				<center>
-				<img src="/storage/{{ $user->avatar }}" class="w-100 ">
+				<img src="/storage/{{ $user->avatar }}"  height="100">
 				<div>
 					<div><a class="btn btn-primary" data-toggle="modal" data-target="#addP"> Changer la photo</a></div>
 				</div>

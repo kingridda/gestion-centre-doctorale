@@ -16,10 +16,7 @@ Route::get('/salarie', function(){
 return view('auth.disting_salarie');
 });
 
-Route::get('/inscription', function(){
-	$pdf = PDF::loadView('inscription'/*, $data*/);
-	return $pdf->download('inscription.pdf');
-});
+Route::get('/inscription','ProfileController@preInscription');
 
 
 //etudiant
@@ -83,6 +80,12 @@ Route::get('/admin/liaison','AdminController@show_liaison');
 Route::post('/admin/liaison','AdminController@submit_liaison');
 Route::get('/admin/liaison/s','AdminController@show_supprimer_liaison');
 Route::post('/admin/liaison/s','AdminController@supprimer_liaison');
+Route::get('/admin/validat','AdminController@add_new_inscription');
+Route::post('/admin/validat', function(){
+	dd(request('user_ids'));
+});
+
+Route::get('/admin/list','AdminController@get_list_doctorant');
 
 
 
