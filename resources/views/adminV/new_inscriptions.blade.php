@@ -11,7 +11,7 @@
                         <div class="form-group row">
                             <div class="col-md-6">
                                     @foreach($users as $user)
-                                    <div class="col-10 "><input type="checkbox" name="user_ids" id="{{$user->id}}" value="{{$user->id}}"> {{$user->name .' '. $user->prenom}}</div>
+                                    <div class="col-10 "><input type="checkbox" name="user_ids[]" value="{{$user->id}}"> {{$user->name .' '. $user->prenom . ' '.$user->cin}}</div>
                                     @endforeach
                                     @error('user_ids')
                                     <span class="invalid-feedback" role="alert">

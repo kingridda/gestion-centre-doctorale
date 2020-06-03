@@ -81,9 +81,7 @@ Route::post('/admin/liaison','AdminController@submit_liaison');
 Route::get('/admin/liaison/s','AdminController@show_supprimer_liaison');
 Route::post('/admin/liaison/s','AdminController@supprimer_liaison');
 Route::get('/admin/validat','AdminController@add_new_inscription');
-Route::post('/admin/validat', function(){
-	dd(request('user_ids'));
-});
+Route::post('/admin/validat', 'AdminController@update_new_inscription');
 
 Route::get('/admin/list','AdminController@get_list_doctorant');
 

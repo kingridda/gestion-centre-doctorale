@@ -21,8 +21,36 @@
 				<td>{{$data->prenom}}</td>
 			</tr>
 			<tr>
-				<th>date inscription</th>
+				<th>date inscription:</th>
 				<td>{{$data->created_at}}</td>
+			</tr>
+			<tr>
+				<th>carte identité nationale:</th>
+				<td>{{$data->cin}}</td>
+			</tr>
+			<tr>
+				<th>Email:</th>
+				<td>{{$data->email}}</td>
+			</tr>
+			<tr>
+				<th>numéro Gsm:</th>
+				<td>{{$data->gsm}}</td>
+			</tr>
+			<tr>
+				<th>adresse:</th>
+				<td>{{$data->adresse}}</td>
+			</tr>
+			<tr>
+				<th>ville:</th>
+				<td>{{$data->ville}}</td>
+			</tr>
+			<tr>
+				<th>Salarié:</th>
+				@if($data->salarie == 0)
+				<td> Non</td>
+				@else
+				<td>Oui</td>
+				@endif
 			</tr>
 		</tbody>
 	</table>

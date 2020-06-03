@@ -34,9 +34,10 @@ class AdminController extends Controller
     }
 
     public function get_list_doctorant(){
-        $data = DB::table('users')->where('validation', 1)->get();
-        $pdf = PDF::loadView('list_docs', $data);
-        return $pdf->download('list_doctorants.pdf');
+        $data = DB::table('users')->whereNotNull('encadrant_id')->get();
+        /*$pdf = PDF::loadView('list_docs', compact('data'));
+        return $pdf->download('list_doctorants.pdf');*/
+        return view('list_docs')->withData($data);
         
     }
     public function these(){
@@ -49,6 +50,14 @@ class AdminController extends Controller
     public function add_new_inscription(){
         return view('adminV.new_inscriptions',['users' => DB::table('users')->where('validation', 0)->get()]);
     
+    }
+    public function update_new_inscription(){
+       $users =  request('user_ids');
+       foreach($users as $id){
+            DB::table('users')->where('id',$id)->update([
+                        'validation'=> 1]);
+        }
+        return redirect('/admin');
     }
 
     public function modifie_doctorants(Request $request){

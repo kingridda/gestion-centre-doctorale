@@ -38,11 +38,9 @@
 		<div class="row row-content mt-5">
 			<div class="col-lg-4 " >
 				<center>
-<<<<<<< HEAD
-				<img src="/storage/{{ $user->avatar }}"  height="100">
-=======
-				<img src="/storage/{{ $user->avatar }}" style="border-radius:100%; width:80%">
->>>>>>> b8336c847d28aaa856236ddeb7cf5e2eb5a702fe
+
+				<img src="/storage/{{ $user->avatar }}" style="border-radius:100%; height: 100px;">
+
 				<div>
 					<div><a class="btn btn-primary" data-toggle="modal" data-target="#addP"> Changer la photo</a></div>
 				</div>

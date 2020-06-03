@@ -12,7 +12,12 @@
 	<table>
 		<thead>
 			<th>nom</th>
-			<th>preom</th>
+			<th>prènom</th>
+			<th>Email</th>
+			<th>CIN</th>
+			<th>Gsm</th>
+			<th>directeur de thèse</th>
+			<th>Thèse</th>
 			<th>date inscription</th>
 		</thead>
 		<tbody>
@@ -20,6 +25,11 @@
 			<tr>
 				<td>{{$doc->name}}</td>
 				<td>{{$doc->prenom}}</td>
+				<td>{{$doc->email}}</td>
+				<td>{{$doc->cin}}</td>
+				<td>{{$doc->gsm}}</td>
+				<td>{{$doc->encadrant_id}}</td>
+				<td>rthese</td>
 				<td>{{$doc->created_at}}</td>
 			</tr>
 			@endforeach
