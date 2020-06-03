@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="textAlign: center; fontWeight: bold;">envoyer compte rendu</div>
+                <div class="card-header" style="textAlign: center; fontWeight: bold;">Envoyer un compte rendu</div>
 
                 <div class="card-body">
                     <form method="POST" enctype="multipart/form-data" action="/profile/compte_rendu">
@@ -27,7 +27,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-right">description</label>
 
                             <div class="col-md-6">
-                                <input id="description" type="description" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
+                                <textarea id="description" type="description" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus></textarea>
 
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="form-group row">
                             <div class=" pt-4 col-md-4 col-form-label" >
-                                <button class="btn btn-primary" > post </button>
+                                <button class="btn btn-primary" > Envoyer </button>
                             </div>
                         </div>
                     </form>

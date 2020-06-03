@@ -14,7 +14,7 @@
                         <div class="form-group row">
                             <label for="response" class="col-md-4 col-form-label text-md-right">reponse</label>
                             <div class="col-md-6">
-                                <input id="response" type="text" class="form-control @error('response') is-invalid @enderror" name="response" required autofocus>
+                                <textarea id="response" type="text" class="form-control @error('response') is-invalid @enderror" name="response" required autofocus> </textarea>
 
                                 @error('response')
                                     <span class="invalid-feedback" role="alert">

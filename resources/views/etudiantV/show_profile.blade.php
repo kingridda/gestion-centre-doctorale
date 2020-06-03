@@ -38,14 +38,18 @@
 		<div class="row row-content mt-5">
 			<div class="col-lg-4 " >
 				<center>
+<<<<<<< HEAD
 				<img src="/storage/{{ $user->avatar }}"  height="100">
+=======
+				<img src="/storage/{{ $user->avatar }}" style="border-radius:100%; width:80%">
+>>>>>>> b8336c847d28aaa856236ddeb7cf5e2eb5a702fe
 				<div>
 					<div><a class="btn btn-primary" data-toggle="modal" data-target="#addP"> Changer la photo</a></div>
 				</div>
 			</center>
 
 			</div>
-			<div class="col-lg-3  mt-4 " >
+			<div class="col-lg-3  mt-5 " >
 				<center>
 					<h2>
 						{{$user->name }} 
@@ -61,7 +65,7 @@
 			</div>
 
 			<?php
-			if ($user->salarie == 0)
+			if ($user->salarie != 0)
 			{
 				$boursier = "non boursier" ;
 			}
@@ -84,6 +88,10 @@
 					<th scope="col"><h2>{{$user->email}}</h2></th>
 				</tr>
 				<tr>
+					<th scope="col"><h2>gsm</h2></th>
+					<th scope="col"><h2>{{$user->gsm}}</h2></th>
+				</tr>
+				<tr>
 					<th scope="col"><h2>Adresse</h2></th>
 					<th scope="col"><h2>{{$user->adresse}}</h2></th>
 				</tr>
@@ -94,6 +102,10 @@
 				<tr>
 					<th scope="col"><h2>Encadrant</h2></th>
 					<th scope="col"><h2>{{$user->encadrant_id}}</h2></th>
+				</tr>
+				<tr>
+					<th scope="col"><h2>Thèse</h2></th>
+					<th scope="col"><h2>{{$user->these_id}}</h2></th>
 				</tr>
 					<th scope="col"><h2>Boursier</h2></th>
 					<th scope="col"><h2>{{$boursier}}</h2></th>

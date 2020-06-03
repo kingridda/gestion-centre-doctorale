@@ -57,7 +57,7 @@
                         
                         <div class="form-group row">
                             <div class="row pt-4 col-md-4 col-form-label" >
-                                <button class="btn btn-primary"> lier </button>
+                                <button class="btn btn-primary">Liaison</button>
                             </div>
                         </div>
                     </form>

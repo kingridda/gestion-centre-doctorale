@@ -15,7 +15,7 @@
                         <div class="form-group row">
                             <label for="question" class="col-md-4 col-form-label text-md-right">question</label>
                             <div class="col-md-6">
-                                <input id="question" type="text" class="form-control @error('question') is-invalid @enderror" name="question" required autofocus>
+                                <textarea id="question" type="text" class="form-control @error('question') is-invalid @enderror" name="question" required autofocus></textarea>
 
                                 @error('question')
                                     <span class="invalid-feedback" role="alert">
@@ -47,31 +47,31 @@
 </div>
 
 <div class="container">
-  <div class="col-12">
-    <div class="mb-2"><a class="btn btn-primary" data-toggle="modal" data-target="#addQ">poser une question au forum</a></div>
-  </div>
   <div>
 	<table class="table">
   <thead class="thead-dark">
     <tr >
       <th scope="col">#</th>
-      <th scope="col">question</th>
-      <th scope="col">NOMBRE REPONSE</th>
-      <th scope="col">DATE</th>
+      <th scope="col">Questions</th>
+      <th scope="col">Nombre de reponse</th>
+      <th scope="col">Date</th>
     </tr>
   </thead>
   <tbody>
     @foreach($questions as $q)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{$q->id}}</th>
       <td><a href="/forum/{{$q->id}}" style="textDecoration: none;">{{$q->question}}</a></td>
-      <td>nb_reponse</td>
+      <td>{{$q->rep_forums->count()}}</td>
       <td>{{$q->created_at}}</td>
       <td></td>
     </tr>
     @endforeach
   </tbody>
   </table>
+  <div class="col-12">
+    <div class="mb-2" style="color:#fff"><a class="btn btn-primary" data-toggle="modal" data-target="#addQ">poser une question au forum</a></div>
+  </div>
   </div>
 </div>
 @endsection

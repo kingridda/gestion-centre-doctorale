@@ -56,7 +56,7 @@
             .footer{
                 position: relative;
                 bottom: 0;
-                height: 10rem;            
+                height: 7rem;            
                 margin: 0px auto;
                 background-color: #8d8d8d;
                 color: #ffffff;
@@ -113,69 +113,66 @@
                 <div class="title m-b-md center">
                     Nos filiere
                 </div>
-                <div class="row row-content">
-                	<div class="col-sm-4 col-12 ">
-                    <img src="img/logiciel.png" style="border-radius:100%" width="300px" >
+                <div class="row ">
+                	<div class="col-lg-4 ">
+                    <img src="img/logiciel.png" style="border-radius:100%" width="15%" >
                         
                             <h3>Génie logiciel</h3> 
-                      <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                      <p> Le génie logiciel ou l'ingénierie logicielle une science de génie industriel qui étudie les méthodes de travail et les bonnes pratiques des ingénieurs qui développent des logiciels. Le génie logiciel s'intéresse en particulier aux procédures systématiques qui permettent d'arriver à ce que des logiciels de grande taille correspondent aux attentes du client, soient fiables, aient un coût d'entretien réduit et de bonnes performances tout en respectant les délais et les coûts de construction</p>
                   </div>
-                </div>
-                <div class="row row-content">
-                	<div class="col-sm-4 col-12 ">
-                    <img src="img/info_decision.png" style="border-radius:100%" width="300px">
+                
+                
+                	<div class="col-lg-4 ">
+                    <img src="img/info_decision.png" style="border-radius:100%" width="15%">
             
                     <h3>Informatique décisionnelle</h3>
-                     <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                     <p> L’informatique décisionnelle est l'informatique à l'usage des décideurs et des dirigeants d'entreprises. Elle désigne les moyens, les outils et les méthodes qui permettent de collecter, consolider, modéliser et restituer les données, matérielles ou immatérielles, d'une entreprise en vue d'offrir une aide à la décision et de permettre à un décideur d’avoir une vue d’ensemble de l’activité traitée. </p>
                 	 </div>
-                </div>
-                <div class="row row-content">
-                	<div class="col-sm-4 col-12 ">
-                    <img src="img/reseau.png" style="border-radius:100%" width="300px">
+                
+                
+                	<div class="col-lg-4 ">
+                    <img src="img/reseau.png" style="border-radius:100%" width="15%">
     
                     <h3>Réseaux et télécommunications</h3>
                      <br>
-                      <p> nssar maxi rajl et merci....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                      <p>La filière réseaux et Télécommunications avancées vise à former des ingénieurs avec une double compétence en réseaux et télécommunications couvrant le déploiement, le management, la maintenance et l’exploitation des réseaux de télécommunications actuels et de nouvelles générations ainsi que la mise en place de réseaux informatiques pour la gestion et l’interconnexion des réseaux de télécommunications. Les enseignements portent sur les systèmes de télécommunications fondements théoriques et applications ainsi que sur le déploiement et l’ingénierie des réseaux de télécommunications et réseaux informatiques.</p>
                       </div>
-                </div>
-                <div class="row row-content">
+                
+                <div class="row">
             
-  					<div class="col-sm-4 col-12 ">
-                     <img src="img/elec.png" style="border-radius:100%" width="300px" >
+  					<div class="col-lg-4 ">
+                     <img src="img/elec.png" style="border-radius:100%" width="15%" >
                 
                     <h3>Génie électrique</h3> 
                     <br>
-                    <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                    <p> Le génie électrique est une branche de la physique qui traite du domaine de l'électricité et de ses applications. Il regroupe les domaines du génie électrotechnique et du génie électronique. L'étude de domaine se réalise en physique, l'application se fait dans le domaine industriel</p>
                     </div>
-                </div>
-                <div class="row row-content">
-                	<div class="col-sm-4 col-12 ">
-                    <img src="img/genie_meca.png" style="border-radius:100%" width="300px">
+                
+                
+                	<div class="col-lg-4 ">
+                    <img src="img/genie_meca.png" style="border-radius:100%" width="15%">
             
                     <h3>Génie mécanique</h3>
                     <br>
-                    <p> je suis tres fiere de se travail ....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa     aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                    <p> Le génie mécanique désigne l'ensemble des connaissances liées à la mécanique, au sens physique (sciences des mouvements) et au sens technique (étude des mécanismes). Ce champ de connaissances va de la conception d'un produit mécanique au recyclage de ce dernier en passant par la fabrication, la maintenance, etc. </p>
                     </div>
-                </div>
-                <div class="row row-content">
-                	<div class="col-sm-4 col-12 ">
-                    <img src="img/ener_env.png" style="border-radius:100%" width="300px">
+                
+                
+                	<div class="col-lg-4 ">
+                    <img src="img/ener_env.png" style="border-radius:100%" width="15%">
     
                     <h3>Génie Energétique et Environnement</h3>
                     <br>   
-                    <p> nssar maxi rajl et merci....asdfghjhg fdsa  aaaaa aaaaaaa aa aaaaaa aaaa aaa  aaaaa a aaa aaaa aa aaaa a aaaaa  aaaaaa aa aaaaaa aaa a aaaaa aaa aaaaaa aa aaaaaa aa aa aaaa a aaaaaaa a aa aaaa aa aa aaaa aa aaaa aa aaa aa aa aaaaa aaa aaaa aaa aaaaaaa a a aaaaaaa aa aaaa aaa</p>
+                    <p> Le génie énergétique rassemble l'ensemble des aspects techniques et industriels de la production, du transport et de l'utilisation de l'énergie, quelle qu'en soit la forme. </p>
                 	</div>
                  </div>
             
             </div>
+        </div>
 
     <footer  class="footer" >
             <div class="content footer-margin">   
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo.
-              .</p>
+            <p>Cet humble travail est dédié à notre cher professeur Mahmoud Nassar.</p>
             <div class="">© 2020 Copyright
                     <a href="#"> GCD.com</a>
             </div>

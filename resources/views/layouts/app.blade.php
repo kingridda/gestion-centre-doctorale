@@ -127,11 +127,7 @@
     </div>
      <footer  class="footer" >
             <div class="footer-margin">   
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo.
-              .</p>
+            <p>Cet humble travail est dédié à notre cher professeur Mahmoud Nassar.</p>
             <div class="">© 2020 Copyright
                     <a href="#"> GCD.com</a>
             </div>
