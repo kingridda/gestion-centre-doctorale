@@ -19,7 +19,7 @@ class profilePolicy
     {
         //
         
-        return ($user->validation == 1);
+        return $user->validation === 1 ;
     }
 
     /**
@@ -31,7 +31,7 @@ class profilePolicy
      */
     public function view(User $user, User $model)
     {
-        //
+       //
     }
 
     /**

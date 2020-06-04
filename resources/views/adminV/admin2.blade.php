@@ -52,11 +52,12 @@
                                 <canvas id="canvas" width="400" height="400"></canvas>
                         </div>
                         <div class="col-sm-4">
-                                <canvas id="salare" width="400" height="400"></canvas>
+                                <canvas id="docs" width="400" height="400"></canvas>
                         </div>
                         <div class="col-sm-4">
-                                <canvas id="villes" width="400" height="400"></canvas>
+                                <canvas id="salare" width="400" height="400"></canvas>
                         </div>
+                        
                     </div>
 
 
@@ -70,28 +71,46 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js" charset="utf-8"></script>
 <script>
        var url = "{{url('admin/charts')}}";
-        var Years = new Array();
+        let annee = new Array();
+        let inscriptions = new Array();
         var nbr_doctorants = new Array();
+        let docs_salarie = new Array();
         $(document).ready(function(){
           $.get(url, function(response){
-            var ctx = document.getElementById("canvas").getContext('2d');
+
+            //data gathering
+           response.total_inscriptions.forEach(x =>{ inscriptions.push(x.nbr);
+                                                      annee.push(x.year)});
+           docs_salarie.push(response.salarie);
+           docs_salarie.push(response.total_doctorants - response.salarie);
+
+            //1er canvas inscription fonction annees            
+            var inscriptions_bars = document.getElementById("canvas").getContext('2d');
             
-                var myChart = new Chart(ctx, {
+                var bars_inscriptions_chart = new Chart(inscriptions_bars, {
                   type: 'bar',
                   data: {
-                      labels:['2019', '2020'],
+                      labels:annee,
                       datasets: [{
                           label: 'pré-inscriptions',
-                          data: [20,40],
+                          data: inscriptions,
 
                            backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
                                
                             ],
                             borderColor: [
                                 'rgba(255, 99, 132, 1)',
                                 'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
                                 
                             ],
                             
@@ -110,6 +129,90 @@
                       }
                   }
               });
+
+                //2eme canvas doctorant valid salarie /non
+                var element_canvas = document.getElementById("salare").getContext('2d');
+            
+                var salarie_chart = new Chart(element_canvas, {
+                  type: 'doughnut',
+                  data: {
+                      labels:['doctorants salariés', 'doctorants non salariés'],
+                      datasets: [{
+                          label: 'salarie',
+                          data: docs_salarie,
+                          backgroundColor: [
+                                'rgba(255, 99, 132, 0.4)',
+                                'rgba(54, 162, 235, 0.4)',
+                                'rgba(255, 206, 86, 0.4)',
+                                'rgba(75, 192, 192, 0.4)',
+                                'rgba(153, 102, 255, 0.4)',
+                                'rgba(255, 159, 64, 0.4)'
+                               
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                                
+                            ],
+
+                      }]
+                  },
+
+                  options: {},
+              });
+              //3eme canavas doctorant enregistré
+              var docs_bars = document.getElementById("docs").getContext('2d');
+            
+                var docs_chart = new Chart(docs_bars, {
+                  type: 'bar',
+                  data: {
+                      labels:['2020-2021','2022-2023'],
+                      datasets: [{
+                          label: 'doctorants enregistré dans le centre',
+                          data: [20,30],
+
+                           backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                               
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                                
+                            ],
+                            
+
+                          borderWidth: 1
+                      }]
+                  },
+
+                  options: {
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                              }
+                          }]
+                      }
+                  }
+              });
+
+
+
+              //4eme canvas
           });
         });
 </script>
