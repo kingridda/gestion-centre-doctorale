@@ -18,6 +18,7 @@ class CreateThesesTable extends Migration
             $table->string('domaine',30);
             $table->string('filiere',30);
             $table->string('sujet',50);
+            $table->integer('structure_id')->nullable();          
             $table->timestamps();
         });
     }

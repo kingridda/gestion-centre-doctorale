@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('salarie');
             $table->integer('encadrant_id')->nullable();          
             $table->integer('these_id')->nullable();          
+            $table->integer('structure_id')->nullable();          
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

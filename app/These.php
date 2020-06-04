@@ -12,4 +12,7 @@ class These extends Model
 	public function user(){
         return $this->hasOne('App\User');
     }
+    public function structure(){
+    	return $this->belongsTo('App\Structure');
+    }
 }

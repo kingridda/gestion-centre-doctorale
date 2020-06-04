@@ -18,7 +18,8 @@ class profilePolicy
     public function viewAny(User $user) 
     {
         //
-        return $user->validation == 1;
+        
+        return ($user->validation == 1);
     }
 
     /**

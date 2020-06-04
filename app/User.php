@@ -46,7 +46,9 @@ class User extends Authenticatable
     public function these(){
         return $this->belongsTo('App\These');
     }
-
+    public function structure(){
+        return $this->belongsTo('App\Structure');
+    }
     public function messages(){
         return $this->hasMany('App\Message');
     }
