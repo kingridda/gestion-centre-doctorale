@@ -45,12 +45,12 @@ class ProfileController extends Controller
 
         //gestion des massages
     public function env_message_show(){
-        $this->authorize('viewAny');
+        if(Auth::user()->encadrant_id === null)return redirect('/profile');
         return view('etudiantV.env_msg_enc');
     }
 
     public function show_messages(){
-        $this->authorize('viewAny');
+        if(Auth::user()->encadrant_id === null)return redirect('/profile');
         if(Auth::user()->messages->count()){
         return view('etudiantV.see_messages')->with('messages',Auth::user()->messages);
         }
@@ -58,14 +58,14 @@ class ProfileController extends Controller
 
     }
     public function show_one_messages(){
-        $this->authorize('viewAny');
+        if(Auth::user()->encadrant_id === null)return redirect('/profile');
         return view('etudiantV.see_one_message')->with('message', Message::find(request('id')));
     }
 
     public function env_message(Request $request){
         //validate data
 
-        $this->authorize('viewAny');
+        if(Auth::user()->encadrant_id === null)return redirect('/profile');
 
         $this->validate($request, [
             'title' => 'required|string|max:150',
@@ -88,17 +88,17 @@ class ProfileController extends Controller
         //gestion du compte rendu
 
         public function form_compte_rendu(){
-            $this->authorize('viewAny');
+            if(Auth::user()->encadrant_id === null)return redirect('/profile');
             return view('etudiantV.env_compte_rendu');
         }
         public function show_compte_rendu(){
-            $this->authorize('viewAny');
+            if(Auth::user()->encadrant_id === null)return redirect('/profile');
             return view('etudiantV.show_compte_rendu')->with('crs',Auth::user()->rapports);
         }
 
         
         public function env_compte_rendu(Request $request){
-            $this->authorize('viewAny');
+            if(Auth::user()->encadrant_id === null)return redirect('/profile');
 
             $this->validate($request, [
             'title' => 'required|string|max:30',
@@ -119,12 +119,12 @@ class ProfileController extends Controller
 
         //SOUTENANCE
         public function demande_soutenance(){
-            $this->authorize('viewAny');
+            if(Auth::user()->encadrant_id === null)return redirect('/profile');
             return view('etudiantV.demande_soutenance');
         }
 
         public function env_demande_soutenance(Request $request){
-            $this->authorize('viewAny');
+            if(Auth::user()->encadrant_id === null)return redirect('/profile');
             $this->validate($request, [
             'attachments' => 'required|max:2000|mimes:pdf,doc,docx,zip,rar'
         ]);

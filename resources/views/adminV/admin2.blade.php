@@ -57,6 +57,12 @@
                         <div class="col-sm-4">
                                 <canvas id="salare" width="400" height="400"></canvas>
                         </div>
+                        <div class="col-sm-4">
+                                <canvas id="soutenanc" width="400" height="400"></canvas>
+                        </div>
+                        <div class="col-sm-4">
+                                <canvas id="structurs" width="400" height="400"></canvas>
+                        </div>
                         
                     </div>
 
@@ -75,12 +81,18 @@
         let inscriptions = new Array();
         var nbr_doctorants = new Array();
         let docs_salarie = new Array();
+        let annee_soutenances = new Array();
+        let soutenances = new Array();
         $(document).ready(function(){
           $.get(url, function(response){
 
             //data gathering
            response.total_inscriptions.forEach(x =>{ inscriptions.push(x.nbr);
                                                       annee.push(x.year)});
+           response.soutenances.forEach(x =>{ soutenances.push(x.nbr);
+                                                      annee_soutenances.push(x.year)});
+
+
            docs_salarie.push(response.salarie);
            docs_salarie.push(response.total_doctorants - response.salarie);
 
@@ -212,7 +224,73 @@
 
 
 
-              //4eme canvas
+              //4eme canvas soutenances
+              var sout_canavs = document.getElementById("soutenanc").getContext('2d');
+            
+                var sout_bars = new Chart(sout_canavs, {
+                  type: 'line',
+                  data: {
+                      labels:annee_soutenances,
+                      datasets: [{
+                          label: 'soutenances',
+                          data: soutenances,
+
+                           
+                            borderColor: [
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                                
+                            ],
+                            
+
+                          borderWidth: 1
+                      }]
+                  },
+
+                  options: {}
+              });
+              
+
+
+
+
+              //5emm canvas radar des structures
+              var structures_canavs = document.getElementById("structurs").getContext('2d');
+            
+                var structures_radar = new Chart(structures_canavs, {
+                  type: 'radar',
+                  data: {
+                      labels:['reseau', 'logistic','big data'],
+                      datasets: [{
+                          label: 'soutenances',
+                          data: [5,20,10],
+
+                           
+                            borderColor: [
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                                
+                            ],
+                            
+
+                          borderWidth: 1
+                      }]
+                  },
+
+                  options: {
+                      
+                  }
+              });
+              
+
+
+
           });
         });
 </script>
