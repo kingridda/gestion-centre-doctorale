@@ -84,6 +84,7 @@ Route::get('/admin/validat','AdminController@add_new_inscription');
 Route::post('/admin/validat', 'AdminController@update_new_inscription');
 
 Route::get('/admin/list','AdminController@get_list_doctorant');
+Route::get('/admin/charts','chartController@charts');
 
 
 

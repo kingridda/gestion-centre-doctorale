@@ -30,7 +30,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('adminV.admin');
+        return view('adminV.admin2');
     }
 
     public function get_list_doctorant(){
@@ -214,7 +214,7 @@ class AdminController extends Controller
     //liaisons
     public function show_liaison(){
         return view('adminV.liaison',['users' => DB::table('users')->whereNull('encadrant_id')
-                                                                    ->orWhereNull('these_id')->get(),
+                                                                    ->orWhereNull('these_id')->having('validation', 1)->get(),
                                             'encadrants' => DB::table('encadrants')->get(),
                                             'theses' => DB::table('theses')->get()
                                     ]);
