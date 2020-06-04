@@ -31,21 +31,38 @@
                         </div>
                     </div>
                     <div class="row inform-cards">
+                     @if($nb_notifications > 0)
                         <div class="col-sm-6 col-md-4 col-lg-3 p-4">
                             <div class="card text-white my-2 rounded">
                                 <div class="card-body bg-primary d-flex align-items-center justify-content-between">
                                     <i class="fas fa-users fa-2x"></i>
                                     <div class="inner-text text-right">
-                                        <h3><span class="badge badge-danger badge-pill">20</span> New   </h3>
-                                        <h5>Users</h5>
+                                        <h3><span class="badge badge-danger badge-pill">{{$nb_notifications }}</span></h3>
+                                        <h5>Nouvelle préinscription</h5>
                                     </div>
                                 </div>
                                 <div class="card-footer bg-dark">
-                                    <a href="#" class="btn btn-link text-danger">Learn more</a>
+                                    <a href="http://localhost:8000/admin/validat" class="btn btn-link text-danger">valider les préinscriptions</a>
                                 </div>
                             </div>
                         </div>
-                        
+                        @endif
+                        @if($nb_demande_souten>0)
+                        <div class="col-sm-6 col-md-4 col-lg-3 p-4">
+                            <div class="card text-white my-2 rounded">
+                                <div class="card-body bg-primary d-flex align-items-center justify-content-between">
+                                    <i class="fas fa-users fa-2x"></i>
+                                    <div class="inner-text text-right">
+                                        <h3><span class="badge badge-danger badge-pill">{{$nb_demande_souten }}</span> </h3>
+                                        <h5>Nouvelle demande de soutenance</h5>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-dark">
+                                    <a href="http://localhost:8000/admin/soutenances" class="btn btn-link text-danger">valider les demandes</a>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
@@ -83,6 +100,8 @@
         let docs_salarie = new Array();
         let annee_soutenances = new Array();
         let soutenances = new Array();
+        let structures_nbrs = new Array();
+        let structures_titles = new Array();
         $(document).ready(function(){
           $.get(url, function(response){
 
@@ -91,7 +110,10 @@
                                                       annee.push(x.year)});
            response.soutenances.forEach(x =>{ soutenances.push(x.nbr);
                                                       annee_soutenances.push(x.year)});
-
+           response.structures_values.forEach(x => {
+                                        structures_titles.push(x.titre);
+                                        structures_nbrs.push(x.nbr);
+                                });
 
            docs_salarie.push(response.salarie);
            docs_salarie.push(response.total_doctorants - response.salarie);
@@ -263,10 +285,10 @@
                 var structures_radar = new Chart(structures_canavs, {
                   type: 'radar',
                   data: {
-                      labels:['reseau', 'logistic','big data'],
+                      labels:structures_titles,
                       datasets: [{
-                          label: 'soutenances',
-                          data: [5,20,10],
+                          label: 'distribution des doctorants selon les structures',
+                          data: structures_nbrs,
 
                            
                             borderColor: [
@@ -283,9 +305,24 @@
                       }]
                   },
 
-                  options: {
-                      
-                  }
+                 options : {
+                      scale: {
+                          angleLines: {
+                              display: true
+                          },
+                          ticks: {
+                              suggestedMin: 0,
+
+                              suggestedMax:  structures_nbrs.reduce(function(a, b) {
+                                                    return Math.max(a, b);  
+                                                      })
+
+                              }
+                          }
+                        }
+
+
+                  //
               });
               
 

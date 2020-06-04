@@ -25,8 +25,7 @@ class chartController extends Controller
         $data['soutenances'] = DB::table('soutenances')->select(DB::raw('count(id) as nbr'),DB::raw('YEAR(created_at) year'))
         ->groupby('year')
         ->get();
-
-    	
+        $data['structures_values'] = DB::table('theses')->join('structures', 'structures.id', '=', 'theses.structure_id')->select(DB::raw('structures.titre ,count(*) as nbr'))->groupBy('structures.titre')->get();
 
         
 

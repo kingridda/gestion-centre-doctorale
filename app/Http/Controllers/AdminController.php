@@ -10,6 +10,7 @@ use App\User;
 use App\Encadrant;
 use App\Soutenance;
 use DB;
+use App\Structure;
 
 class AdminController extends Controller
 {
@@ -30,7 +31,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('adminV.admin2');
+        $nb_notifications =intval(DB::table('users')->where('validation',0)->get()->count()) ;
+        $nb_demande_souten = intval(DB::table('soutenances')->where('date',null)->get()->count());
+        return view('adminV.admin2')->with(compact('nb_notifications', 'nb_demande_souten'));
     }
 
     public function get_list_doctorant(){
@@ -41,7 +44,8 @@ class AdminController extends Controller
         
     }
     public function these(){
-        return view('adminV.theses')->withTheses(These::all());
+        return view('adminV.theses')->with(['theses'=>These::all(), 
+                                    'structures'=>Structure::all()]);
     }
     public function doctorants(){
         return view('adminV.docs')->withDocs(User::all());
@@ -115,12 +119,14 @@ class AdminController extends Controller
          $this->validate($request, [
             'domaine' => 'required|string|max:30',
             'filiere' => 'required|max:30|string',
-            'sujet' => 'required|max:50|string'
+            'sujet' => 'required|max:50|string',
+            'structure' =>''
              ]);
         These::create([
             'domaine' => $request->domaine,
             'filiere' => $request->filiere,
-            'sujet' => $request->sujet
+            'sujet' => $request->sujet,
+            'structure_id'=> $request->structure,
         ]);
         
         return redirect('/admin/theses');
