@@ -80,6 +80,7 @@ class AdminController extends Controller
             if($request->ville) $data->ville = $request->ville;
             if($request->adresse) $data->adresse = $request->adresse;
             if($request->cin) $data->cin = $request->cin;
+            $data->cin = strtoupper($request->cin);
             DB::table('users')->where('id',$request->idU)->update([
                         'name'=> $data->name,
                         'email' => $data->email,
@@ -164,6 +165,7 @@ class AdminController extends Controller
             'avatar' => $path,
             'password' => Hash::make($request->password)
         ]);
+        
         
         return redirect('/admin/dir');
     }

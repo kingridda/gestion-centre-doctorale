@@ -15,10 +15,11 @@ class chartController extends Controller
 
 
     public function charts(){
-    	$data[0] = DB::table('users')->where('validation',1)->get()->count();
-    	$data[1] = DB::table('users')->whereNotNull('encadrant_id')->get()->count();
-        $data[2] = DB::table('users')->where('salarie', 0)->get()->count();
-    	$data[3] = DB::table('users')->groupBy('ville')->get()->count();
+    	$data['users'] = DB::table('users')->get()->count();
+    	$data['doctorants'] = DB::table('users')->whereNotNull('encadrant_id')->get()->count();
+        $data['salarie'] = DB::table('users')->where('salarie','!=', 0)->get()->count();
+        $data['villes'] = DB::table('users')->select(DB::raw('count(*) as nbr, ville'))->groupBy('ville')->get();
+        //$data['2020'] = DB::table('users')->whereMonth('created_at','05');
     	return response()->json($data);
     }
 }
