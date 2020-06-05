@@ -37,7 +37,7 @@ class AdminController extends Controller
     }
 
     public function get_list_doctorant(){
-        $data = DB::table('users')->whereNotNull('encadrant_id')->get();
+        $data = DB::table('users')->join('encadrants', 'users.encadrant_id', '=','encadrants.id')->where('validation', 1)->join('theses', 'users.these_id', '=', 'theses.id')->select(DB::raw('users.*, theses.sujet, encadrants.name as encadrant'))->get();
         /*$pdf = PDF::loadView('list_docs', compact('data'));
         return $pdf->download('list_doctorants.pdf');*/
         return view('list_docs')->withData($data);
@@ -48,7 +48,7 @@ class AdminController extends Controller
                                     'structures'=>Structure::all()]);
     }
     public function doctorants(){
-        return view('adminV.docs')->withDocs(User::all());
+        return view('adminV.docs')->with('docs',DB::table('users')->join('encadrants', 'users.encadrant_id', '=','encadrants.id')->where('validation', 1)->join('theses', 'users.these_id', '=', 'theses.id')->select(DB::raw('users.*, theses.sujet, encadrants.name as encadrant'))->get());
     }
 
     public function add_new_inscription(){
@@ -111,8 +111,7 @@ class AdminController extends Controller
         return view('adminV.directeurs')->withEncadrants(Encadrant::all());
     }
     public function soutenances(){
-        return view('adminV.soutenances')->with(['soutenances'=> Soutenance::all(),
-                                                 'users' => User::all() ]);
+        return view('adminV.soutenances')->with('soutenances', DB::table('soutenances')->join('users', 'users.id', '=','soutenances.user_id')->join('theses', 'theses.id', '=', 'these_id')->select(DB::raw('soutenances.*, users.name, users.prenom, users.these_id,sujet'))->orderBy('created_at', 'desc')->get());
     }
 
     public function store_these(Request $request){

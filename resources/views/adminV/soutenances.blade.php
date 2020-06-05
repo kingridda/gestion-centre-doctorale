@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="heure" class="col-md-4 col-form-label text-md-right"> DATE </label>
+                            <label for="heure" class="col-md-4 col-form-label text-md-right"> Heure </label>
 
                             <div class="col-md-6">
                                 <input id="heure" type="heure" class="form-control @error('heure') is-invalid @enderror" name="heure" value="{{ old('heure') }}"  autocomplete="heure" autofocus>
@@ -131,18 +131,26 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">identifiant</th>
-        <th scope="col">domaine</th>
-        <th scope="col">filière</th>
-        <th scope="col">date d'ajout</th>
+        <th scope="col">date de demande</th>
+        <th scope="col">doctorant</th>
+        <th scope="col">sujet</th>
+        <th scope="col">date planifie</th>
+        <th scope="col">amphi</th>
+        <th scope="col">heure</th>
+        <th scope="col">telecharger la demande</th>
       </tr>
     </thead>
     <tbody>
       @foreach($soutenances as $sout)
       <tr>
         <th scope="row">{{$sout->id}}</th>
-        <td>{{$sout->demande}}</td>
-        <td>{{$sout->date}}</td>
         <td>{{$sout->created_at}}</td>
+        <td>{{$sout->name .' '.$sout->prenom}}</td>
+        <td>{{$sout->sujet}}</td>
+        <td>{{$sout->date}}</td>
+        <td>{{$sout->amphi}}</td>
+        <td>{{$sout->heure}}</td>
+        <td><a href="/storage/{{$sout->demande_soutenance}}">visualiser</a></td>
       </tr>
       @endforeach
     </tbody>

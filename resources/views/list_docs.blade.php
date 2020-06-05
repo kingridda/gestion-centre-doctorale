@@ -6,9 +6,9 @@
 	<title>List</title>
 </head>
 <body>
-	<div><h3>List des doctorants du centre</h3></div>
+	<center><h3>List des doctorants du centre</h3></center>
 	
-	
+	<center>
 	<table>
 		<thead>
 			<th>nom</th>
@@ -17,9 +17,9 @@
 			<th>CIN</th>
 			<th>Gsm</th>
 			<th>directeur de thèse</th>
-			<th>Thèse</th>
-			<th>date inscription</th>
+			<th>Sujet</th>
 		</thead>
+	</br>
 		<tbody>
 			@foreach($data as $doc)
 			<tr>
@@ -28,13 +28,12 @@
 				<td>{{$doc->email}}</td>
 				<td>{{$doc->cin}}</td>
 				<td>{{$doc->gsm}}</td>
-				<td>{{$doc->encadrant_id}}</td>
-				<td>rthese</td>
-				<td>{{$doc->created_at}}</td>
+				<td>{{$doc->encadrant}}</td>
+				<td>{{$doc->sujet}}</td>
 			</tr>
 			@endforeach
 		</tbody>
 	</table>
-	</div>
+	</center>
 </body>
 </html>

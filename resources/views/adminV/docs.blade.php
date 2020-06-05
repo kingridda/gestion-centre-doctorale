@@ -170,9 +170,11 @@
     <thead class="thead-dark table-striped">
       <tr>
         <th scope="col">identifiant</th>
-        <th scope="col">domaine</th>
-        <th scope="col">filière</th>
-        <th scope="col">date d'ajout</th>
+        <th scope="col">nom</th>
+        <th scope="col">prenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Sujet</th>
+        <th scope="col">Directeur de thèse</th>
       </tr>
     </thead>
     <tbody>
@@ -182,6 +184,8 @@
         <td>{{$doc->name}}</td>
         <td>{{$doc->prenom}}</td>
         <td>{{$doc->email}}</td>
+        <td>{{$doc->sujet}}</td>
+        <td>{{$doc->encadrant}}</td>
       </tr>
       @endforeach
     </tbody>

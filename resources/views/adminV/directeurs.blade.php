@@ -135,9 +135,9 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">identifiant</th>
-        <th scope="col">domaine</th>
-        <th scope="col">filière</th>
-        <th scope="col">date d'ajout</th>
+        <th scope="col">Nom</th>
+        <th scope="col">CIN</th>
+        <th scope="col">Email</th>
       </tr>
     </thead>
     <tbody>
@@ -146,7 +146,7 @@
         <th scope="row">{{$en->id}}</th>
         <td>{{$en->name}}</td>
         <td>{{$en->cin}}</td>
-        <td>{{ $en->cin}}</td>
+        <td>{{ $en->email}}</td>
       </tr>
       @endforeach
     </tbody>

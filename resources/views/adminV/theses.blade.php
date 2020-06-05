@@ -114,7 +114,7 @@
         <th scope="col">identifiant</th>
         <th scope="col">domaine</th>
         <th scope="col">filière</th>
-        <th scope="col">date d'ajout</th>
+        <th scope="col">Sujet</th>
       </tr>
     </thead>
     <tbody>
@@ -123,7 +123,7 @@
         <th scope="row">{{$these->id}}</th>
         <td>{{$these->domaine}}</td>
         <td>{{$these->filiere}}</td>
-        <td>{{$these->created_at}}</td>
+        <td>{{$these->sujet}}</td>
       </tr>
       @endforeach
     </tbody>
