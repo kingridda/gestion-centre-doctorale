@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer bg-dark">
-                                    <a href="http://localhost:8000/admin/validat" class="btn btn-link text-danger">valider les préinscriptions</a>
+                                    <a href="admin/validat" class="btn btn-link text-danger">valider les préinscriptions</a>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer bg-dark">
-                                    <a href="http://localhost:8000/admin/soutenances" class="btn btn-link text-danger">valider les demandes</a>
+                                    <a href="admin/soutenances" class="btn btn-link text-danger">valider les demandes</a>
                                 </div>
                             </div>
                         </div>
