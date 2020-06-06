@@ -45,6 +45,11 @@
                 right: 10px;
                 top: 18px;
             }
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
 
             .content {
                 text-align: center;
@@ -94,6 +99,8 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height bgimage">
+            <div class="top-left links"><a  href="encadrant/login">espace Directeur de thèse</a> </div>
+                           
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
