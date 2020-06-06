@@ -4,17 +4,22 @@
 	<table class="table">
 	  	<thead class="thead-light">
 	    	<tr>
-		      <th scope="col">#</th>
+		      <th scope="col">Date</th>
+		      <th scope="col">Doctorant</th>
 		      <th scope="col">titre</th>
-		      <th scope="col">date</th>
+		      <th scope="col">description</th>
+		      <th scope="col"></th>
 	    	</tr>
 	  	</thead>
 	  	<tbody>
-	  		@foreach($users[0]->rapports as $rp)
+	  		@foreach($crs as $cr)
 	    	<tr>
-	    		<th>{{$rp->title}}</th>
-	    		<td>{{$rp->created_at}}</td>
-		      	<td>{{$users[0]->these->sujet}}</td>
+	    		<td>{{$cr->created_at}}</td>
+	    		<td>{{$cr->name.' '.$cr->prenom}}</td>
+		      	<td class="text-wrap">{{$cr->title}}</td>
+		      	<td class="d-none d-sm-block text-wrap">{{$cr->description}}</td>
+		      	<td><a href="/storage/{{$cr->attachment}}">visualiser</a></td>
+
 	    	</tr>
 	    	@endforeach
 		</tbody>

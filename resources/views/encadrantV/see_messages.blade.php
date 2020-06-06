@@ -4,23 +4,26 @@
 	<table class="table">
 	  	<thead class="thead-dark">
 	    	<tr>
-		      <th scope="col">#</th>
-		      <th scope="col">nom</th>
-		      <th scope="col">prenom</th>
-		      <th scope="col">objet</th>
-		      <th scope="col">date</th>
+		      <th scope="col">Date</th>
+		      <th scope="col">Source</th>
+		      <th scope="col">Objet</th>
+		      <th scope="col">Contenu</th>
+		      <th scope="col"> </th>
 	    	</tr>
 	  	</thead>
 	  	<tbody>
 	  		@isset($messages)
 	  		@foreach($messages as $message)
 	    	<tr>
-		      <th scope="row">vu</th>		     
-		      <td>{{$users->find($message->user_id)->name}}</td>
-		      <td>{{$users->find($message->user_id)->prenom}}</td>
-		      <td><a href="/encadrant/env_message/show/{{$message->id}}">{{$message->objet}}</a></td>
-		      <td>{{$message->created_at}}</td>
-
+		      <td scope="row">{{$message->created_at}}</td>	
+			    @if($message->source == 0)	     
+			    <td scope="row">Moi</td>	
+			    @else
+			    <td scope="row">{{$message->name .' '. $message->prenom}}</td>
+			    @endif	     
+			      <td>{{$message->objet}}</td>
+			      <td class="d-none d-sm-block text-wrap">{{$message->contenu}}</td>
+				  <td><a href="/encadrant/env_message/show/{{$message->id}}">visualiser</a></td>
 	    	</tr>
 	    	@endforeach
 	    	@endisset

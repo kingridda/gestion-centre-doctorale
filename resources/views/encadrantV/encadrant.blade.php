@@ -32,11 +32,36 @@
         </aside>
         <div class="col-8">
             <div class="title"><h1>Bienvenu à votre session</h1></div>
-            <p> description</p>
-            <div>
-            <img src="im.png" style="width: 600px;" /></div>
-            <div class="telecharger"> <a href="#">telecharger attachment</a></div>
-           
+            <div class="row inform-cards" >
+                        <div class="col-sm-5 col-10 p-4">
+                            <div class="card text-white my-2 rounded">
+                                <div class="card-body bg-primary d-flex align-items-center justify-content-between">
+                                    <i class="fas fa-users fa-2x"></i>
+                                    <div class="inner-text text-right">
+                                        <h3><span class="badge badge-danger badge-pill">1</span></h3>
+                                        <h5>Nouveau message</h5>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-dark">
+                                    <a href="encadrant/env_message/show" class="btn btn-link text-danger">Voir ma boite de messages</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-10 p-4">
+                            <div class="card text-white my-2 rounded">
+                                <div class="card-body bg-primary d-flex align-items-center justify-content-between">
+                                    <i class="fas fa-users fa-2x"></i>
+                                    <div class="inner-text text-right">
+                                        <h3><span class="badge badge-danger badge-pill">1</span></h3>
+                                        <h5>Nouveau Compte rendu / rapport</h5>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-dark">
+                                    <a href="encadrant/compte_rendu" class="btn btn-link text-danger">Voir les comptes rendus / rapports</a>
+                                </div>
+                            </div>
+                        </div>
+            </div>
         </div>
         
     </div>

@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use App\These;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use DB;
 
 class EncadrantController extends Controller
-{
+{ 
     /**
      * Create a new controller instance.
      *
@@ -39,14 +42,15 @@ class EncadrantController extends Controller
     public function show_messages(){
 
         if(Auth::user()->users->count() && Auth::user()->messages->count() ){
-        return view('encadrantV.see_messages')->with(['messages'=>Auth::user()->messages,
-                                                        'users' =>Auth::user()->users]);
+        return view('encadrantV.see_messages')->with('messages',Auth::user()->messages()->join('users', 'users.id', '=', 'messages.user_id')->select(DB::raw('messages.*, users.name, users.prenom'))->orderBy('created_at', 'desc')->get()); 
         }
-        return view('encadrantV.see_messages');
+        return redirect('/encadrant');
     }
     public function show_one_messages(){
-
-        return view('encadrantV.see_one_message')->with('message', Message::find(request('id')));
+        $message = Message::find(request('id'));
+        return view('encadrantV.see_one_message')->with(['message' => $message,
+                                                        'doctorant'=> User::find($message->user_id),
+                                                        'sujet'=> These::find(User::find($message->user_id)->these_id)->sujet]);
     }
     public function env_message(Request $request){
         //validate data
@@ -71,6 +75,7 @@ class EncadrantController extends Controller
 
         //comptes rendu
         public function show_comptes_rendu(){
-            return view('encadrantV.show_comptes_rendu')->with('users', Auth::user()->users);
+            return view('encadrantV.show_comptes_rendu')->with('crs', Auth::user()->users()->join('rapports', 'rapports.user_id', '=', 'users.id')->select(DB::raw('rapports.* , users.name, users.prenom'))
+                ->orderBy('created_at', 'desc')->get());
         }
 }
