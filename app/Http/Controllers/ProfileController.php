@@ -24,7 +24,7 @@ class ProfileController extends Controller
     }
     public function preInscription(){
         $data = Auth::user();
-        $d=['Nom'=>$data->name,'Prenom'=>$data->prenom,'Email'=>$data->email,'CIN'=>$data->cin,'GSM'=>$data->gsm,'Ville'=>$data->ville,'Adresse'=>$data->adresse,'These'=>$data->these_id,'Dir de these'=>$data->encadrant_id,'date'=>date()];
+        $d=['Nom'=>$data->name,'Prenom'=>$data->prenom,'Email'=>$data->email,'CIN'=>$data->cin,'GSM'=>$data->gsm,'Ville'=>$data->ville,'Adresse'=>$data->adresse,'These'=>$data->these_id,'Dir de these'=>$data->encadrant_id,'date'=>date("Y/m/d")];
         $pdf = new pdf("fiche inscription form GCD.pdf");
         $pdf->fillForm($d)
         ->saveAs('formulaire.pdf');
