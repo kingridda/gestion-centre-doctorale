@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use PDF;
 use App\Rapport;
 use App\Encadrant;
 use App\Soutenance;
@@ -12,7 +11,7 @@ use App\Message;
 use App\These;
 use App\Structure;
 use DB;
-
+use mikehaertl\pdftk\Pdf;
 class ProfileController extends Controller
 {   
 
@@ -25,8 +24,12 @@ class ProfileController extends Controller
     }
     public function preInscription(){
         $data = Auth::user();
+        $d=['Nom'=>$data->name,'Prenom'=>$data->prenom,'Email'=>$data->email,'CIN'=>$data->cin,'GSM'=>$data->gsm,'Ville'=>$data->ville,'Adresse'=>$data->adresse,'These'=>$data->these_id,'Dir de these'=>$data->encadrant_id,'date'=>date()];
+        $pdf = new pdf("fiche inscription form GCD.pdf");
+        $pdf->fillForm($d)
+        ->saveAs('formulaire.pdf');
         //$pdf = PDF::loadView('inscription', compact('data',$data));
-        //return $pdf->download('pre_inscription.pdf');
+       	//$pdf->download('pre_inscription.pdf');
         return view('inscription')->withData($data);
     }
     public function show_profile(){
