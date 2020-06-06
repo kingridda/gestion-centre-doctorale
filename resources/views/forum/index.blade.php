@@ -51,19 +51,17 @@
 	<table class="table">
   <thead class="thead-dark">
     <tr >
-      <th scope="col">#</th>
+      <th scope="col">Date</th>
       <th scope="col">Questions</th>
       <th scope="col">Nombre de reponse</th>
-      <th scope="col">Date</th>
     </tr>
   </thead>
   <tbody>
     @foreach($questions as $q)
     <tr>
-      <th scope="row">{{$q->id}}</th>
-      <td><a href="/forum/{{$q->id}}" style="textDecoration: none;">{{$q->question}}</a></td>
-      <td>{{$q->rep_forums->count()}}</td>
       <td>{{$q->created_at}}</td>
+      <td><a href="/forum/{{$q->id}}" class="text-wrap">{{$q->question}}</a></td>
+      <td>{{$q->rep_forums->count()}}</td>
       <td></td>
     </tr>
     @endforeach

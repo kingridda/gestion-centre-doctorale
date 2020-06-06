@@ -47,11 +47,17 @@
 <div class="container">
 	<div class="card">
 		<div class="card-header d-flex" style="justifyContent: space-between;">
-			<div>
-			{{$question->question}}
+			<div class="col-12 col-sm-8">
+
+      <img src="/storage/{{$question->image}}" width="100%">
+			
 			</div>
-			<div><a class="btn btn-primary" data-toggle="modal" data-target="#addR"> Repondre</a></div>
-  			</div>
+      <div class="col-12 col-sm pt-5">
+        <span class="text-wrap">{{$question->question}}</span>
+        <br/>
+			   <a class="btn btn-primary" data-toggle="modal" data-target="#addR"> Repondre</a>
+      </div>
+  	</div>
 		<div class="card-body">
 			@foreach($responses as $res)
 			{{$res->reponse}}<br>

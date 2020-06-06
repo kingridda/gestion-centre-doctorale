@@ -47,10 +47,10 @@
 			</center>
 
 			</div>
-			<div class="col-lg-3  mt-5 " >
+			<div class="col-sm-3  mt-5 " >
 				<center>
 					<h2>
-						{{$user->name }} 
+						{{strtoupper($user->name)}} 
 						<br>
 						
 						{{$user->prenom}}
@@ -62,54 +62,61 @@
 				</center>
 			</div>
 
-			<?php
-			if ($user->salarie != 0)
-			{
-				$boursier = "non boursier" ;
-			}
-			else {
-				$boursier = "boursier";
-			}
 			
-			?>
 			
 			<div class="col-lg-12 ml-5 mt-4 " style="word-spacing: 1rem " >
 				<table class="table">
 					<tbody>
 				<centre>
 				<tr>
-					<th scope="col"><h2>Cin</h2></th>
+					<th scope="col"><h2>CIN:</h2></th>
 					<th scope="col"><h2>{{$user->cin}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col"><h2>Email</h2></th>
+					<th scope="col"><h2>Email:</h2></th>
 					<th scope="col"><h2>{{$user->email}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col"><h2>gsm</h2></th>
+					<th scope="col"><h2>Tél. mobile:</h2></th>
 					<th scope="col"><h2>{{$user->gsm}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col"><h2>Adresse</h2></th>
+					<th scope="col"><h2>Adresse:</h2></th>
 					<th scope="col"><h2>{{$user->adresse}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col"><h2>Ville</h2></th>
+					<th scope="col"><h2>Ville:</h2></th>
 					<th scope="col"><h2>{{$user->ville}}</h2></th>
 				</tr>
 				<tr>
-					<th scope="col"><h2>Encadrant</h2></th>
-					<th scope="col"><h2>{{$user->encadrant_id}}</h2></th>
+					<th scope="col"><h2>Encadrant:</h2></th>
+					
+					<th scope="col"><h2>@isset($encadrant){{$encadrant}}@endisset</h2></th>
+					
 				</tr>
 				<tr>
-					<th scope="col"><h2>Thèse</h2></th>
-					<th scope="col"><h2>{{$user->these_id}}</h2></th>
+					<th scope="col"><h2>Sujet de recherche:</h2></th>
+					
+					<th scope="col"><h2>@isset($these){{$these}}@endisset</h2></th>
+					
 				</tr>
-					<th scope="col"><h2>Boursier</h2></th>
-					<th scope="col"><h2>{{$boursier}}</h2></th>
-				</h2>
+				<tr>
+					<th scope="col"><h2>Structure de recherche:</h2></th>
+					
+					<th scope="col"><h2>@isset($structure){{$structure}}@endisset</h2></th>
+					
+				</tr>
+				<tr>
+				<th scope="col"><h2>Salarié:</h2></th>
+					@if($user->salare)
+				<th scope="col"><h2>Oui</h2></th>
+					@else
+				<th scope="col"><h2>Non</h2></th>
+					@endif
+				
+				</tr>
 			</centre>
-			</tr>
+			
 			</tbody>
 			</table>
 			</div>

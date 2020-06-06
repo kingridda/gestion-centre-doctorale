@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PDF;
 use App\Rapport;
+use App\Encadrant;
 use App\Soutenance;
 use App\Message;
+use App\These;
+use App\Structure;
 use DB;
 
 class ProfileController extends Controller
@@ -27,7 +30,14 @@ class ProfileController extends Controller
         return view('inscription')->withData($data);
     }
     public function show_profile(){
-        return view('etudiantV.show_profile')->withUser(Auth::user());
+        $user = Auth::user();
+        if($user->encadrant_id && $user->these_id)
+        return view('etudiantV.show_profile')->with(['user'=>$user,
+                                                    'encadrant'=>Encadrant::find(Auth::user()->encadrant_id)->name,
+                                                    'these'=>These::find($user->these_id)->sujet ,
+                                                    'structure'=>Structure::find(These::find($user->these_id)->structure_id)->titre ]);
+        else return view('etudiantV.show_profile')->with('user',$user);
+
     }
     public function change_avatar(Request $request){
         $this->validate($request, [
@@ -52,7 +62,7 @@ class ProfileController extends Controller
     public function show_messages(){
         if(Auth::user()->encadrant_id === null)return redirect('/profile');
         if(Auth::user()->messages->count()){
-        return view('etudiantV.see_messages')->with('messages',Auth::user()->messages);
+        return view('etudiantV.see_messages')->with('messages',Auth::user()->messages()->orderBy('created_at', 'desc')->get());
         }
         else return view('etudiantV.see_messages'); 
 
@@ -77,6 +87,7 @@ class ProfileController extends Controller
             'objet' => $request->title,
             'contenu' => $request->description,
             'user_id' => Auth::user()->id,
+            'source' => 1,
             'encadrant_id' => Auth::user()->encadrant_id
         ]);
 
@@ -93,7 +104,7 @@ class ProfileController extends Controller
         }
         public function show_compte_rendu(){
             if(Auth::user()->encadrant_id === null)return redirect('/profile');
-            return view('etudiantV.show_compte_rendu')->with('crs',Auth::user()->rapports);
+            return view('etudiantV.show_compte_rendu')->with('crs',Auth::user()->rapports()->orderBy('created_at', 'desc')->get()); 
         }
 
         

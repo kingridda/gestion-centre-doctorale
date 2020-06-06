@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm-12 d-md-none d-block ">
             <select id="sub-menu" name="sub-menu">
-                <option>aller a...</option>
+                <option>aller à...</option>
                 <option value="/show">Profile</option>
                 <option value="/profile/encm">Envoyer des messages</option>
                 <option value="/profile/encm/show">Boite des messages</option>

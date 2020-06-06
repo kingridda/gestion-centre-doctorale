@@ -61,6 +61,7 @@ class EncadrantController extends Controller
             'objet' => $request->title,
             'contenu' => $request->description,
             'user_id' => (int)$request->distination,
+            'source' => 0,
             'encadrant_id' => Auth::user()->id,
         ]);
 

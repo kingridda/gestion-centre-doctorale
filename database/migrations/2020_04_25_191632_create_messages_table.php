@@ -17,8 +17,9 @@ class CreateMessagesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('encadrant_id');
             $table->integer('user_id');
+            $table->integer('source');//1: encadrant -> etudiant, 0: autre sense
             $table->string('objet', 150);
-            $table->text('contenu');            
+            $table->text('contenu');             
             $table->timestamps();
         });
     }

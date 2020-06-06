@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Forum;
-use App\Rep_forum;
+use App\Rep_forum; 
 use Illuminate\Support\Facades\Auth;
 
 
@@ -16,11 +16,13 @@ class ForumController extends Controller
         $this->middleware('auth');
     }
 	public function index(){
-		return view('forum.index')->with('questions',Forum::all());
+        if(Auth::user()->encadrant_id === null)return redirect('/profile');
+		return view('forum.index')->with('questions',Forum::select('*')->orderBy('created_at', 'desc')->get());
 	}
 
 
     public function show_question(){
+        if(Auth::user()->encadrant_id === null)return redirect('/profile');
         $question = Forum::find(request('id'));
         return view('forum.show')->with(['question'=>$question,
                                         'responses'=>$question->rep_forums
