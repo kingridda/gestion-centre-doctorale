@@ -9,11 +9,13 @@
 
                 <div class="card-body">
                     <div class="row justify-content-center">
-                        <div class="col-5 col-sm-12">
-                            <a href="{{ route('register') }}?sal=0">candidate non salarié</a>
+                        <div class="col-12 col-sm-5 ">
+                            <a role="button" class="btn btn-outline-secondary" href="{{ route('register') }}?sal=0">candidate non salarié</a>
+                            
                         </div>
-                        <div class="col-5 col-sm-12">
-                            <a href="{{ route('register') }}?sal=1">candidate salarié</a>  
+                        <div class="col-12 col-sm-5">
+                            <a role="button" class="btn btn-outline-secondary"href="{{ route('register') }}?sal=1">candidate salarié</a>
+                            
                         </div>
                     </div>
 
