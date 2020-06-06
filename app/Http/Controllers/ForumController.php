@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Forum;
 use App\Rep_forum; 
+use DB;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -25,7 +26,7 @@ class ForumController extends Controller
         if(Auth::user()->encadrant_id === null)return redirect('/profile');
         $question = Forum::find(request('id'));
         return view('forum.show')->with(['question'=>$question,
-                                        'responses'=>$question->rep_forums
+                                        'responses'=>$question->rep_forums()->join('users', 'users.id', '=', 'rep_forums.user_id')->select(DB::raw('rep_forums.*, users.name, users.prenom' ))->get()
                                         ]);
     }   
 

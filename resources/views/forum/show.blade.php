@@ -48,9 +48,7 @@
 	<div class="card">
 		<div class="card-header d-flex" style="justifyContent: space-between;">
 			<div class="col-12 col-sm-8">
-
-      <img src="/storage/{{$question->image}}" width="100%">
-			
+        <img src="/storage/{{$question->image}}" width="100%">
 			</div>
       <div class="col-12 col-sm pt-5">
         <span class="text-wrap">{{$question->question}}</span>
@@ -59,10 +57,28 @@
       </div>
   	</div>
 		<div class="card-body">
-			@foreach($responses as $res)
-			{{$res->reponse}}<br>
-			@endforeach
-		</div>
-	</div>
+			  @foreach($responses as $res)
+        <div class="card">
+            <div class="card-header">
+                  par: {{$res->name . ' ' . $res->prenom}}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                  @if($res->image)
+                  <div class="col-12 col-sm-8">
+                          
+                          <img src="/storage/{{$res->image}}" width="100%">
+                          
+                  </div>
+                  @endif
+                  <div class="col-12 col-sm pt-1">
+                        <span class="text-wrap">{{$res->reponse}}</span>
+                  </div>
+              </div>
+            </div>
+        </div>		
+        @endforeach
+	  </div>
+  </div>
 </div>
 @endsection
