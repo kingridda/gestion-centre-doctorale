@@ -35,15 +35,15 @@ class structuresTableSeeder extends Seeder
         	]]);
         //theses
         DB::table('theses')->insert([[
-            'domaine' => 'Information Security Research Team',
-            'filiere' => ,
-            'sujet' => ,
-            'structure_id'=>
+            'domaine' => 'Electronique',
+            'filiere' => 'ISEM',
+            'sujet' => 'lisage d\'alimentation des capteurs ',
+            'structure_id'=> ''
             ],
             [
             'domaine' => 'Information Security Research Team',
             'filiere' => ,
-            'sujet' => ,
+            'sujet' => '',
             'structure_id'=>
             ],[
             'domaine' => 'Information Security Research Team',
@@ -64,67 +64,67 @@ class structuresTableSeeder extends Seeder
 
         //encadrants
         DB::table('encadrants')->insert([[
-            'name' => '',
-            'cin' => ,
-            'email' => ,
+            'name' => 'Nassar Mahmoud',
+            'cin' => 'K151230',
+            'email' => 'nassar@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=>
+            'avatar'=> 'uploads/default.jpg'
             ],
             [
-            'name' => '',
-            'cin' => ,
-            'email' => ,
+            'name' => 'Mouhamed Janati',
+            'cin' => 'L451123',
+            'email' => 'janati@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=>
+            'avatar'=> 'uploads/default.jpg'
             ],[
-            'name' => '',
-            'cin' => ,
-            'email' => ,
+            'name' => 'Benjbara Sanaa',
+            'cin' => 'M128923',
+            'email' => 'sanaa@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=>
+            'avatar'=> 'uploads/default.jpg'
             ],[
-            'name' => '',
-            'cin' => ,
-            'email' => ,
+            'name' => 'Adil Alaoui',
+            'cin' => 'F158497',
+            'email' => 'adil@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=>
+            'avatar'=> 'uploads/default.jpg'
             ],[
-            'name' => '',
-            'cin' => ,
-            'email' => ,
+            'name' => 'Anas Rezzoq',
+            'cin' => 'H555123',
+            'email' => 'anas@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=>
+            'avatar'=> 'uploads/default.jpg'
             ]]);
         //users
 
         DB::table('users')->insert([[
-            'name' => '',
-            'prenom' => '',
-            'cin' => ,
-            'email' => ,
-            'gsm' => ,
-            'adresse' => ,
-            'ville' => ,
-            'salarie' => ,
-            'encadrant_id' => ,
+            'name' => 'ABOU ALI',
+            'prenom' => 'Anas',
+            'cin' => 'I805236',
+            'email' => 'anas@gmail.com',
+            'gsm' => '0612354811',
+            'adresse' => '4 Bloc 5 quartier elmorabitin',
+            'ville' => 'Tanger',
+            'salarie' => 0,
+            'encadrant_id' => 1,
             'these_id' => ,
             'password'=>Hash::make('123456789'),
-            'avatar'=>,
+            'avatar'=> 'uploads/default.jpg',
             'validation'=> 1
             ],
             [
-            'name' => '',
-            'prenom' => '',
-            'cin' => ,
-            'email' => ,
-            'gsm' => ,
-            'adresse' => ,
-            'ville' => ,
-            'salarie' => ,
-            'encadrant_id' => ,
+            'name' => 'RIDDA',
+            'prenom' => 'abdelghani',
+            'cin' => 'I863214',
+            'email' => 'ridda@gmail.com',
+            'gsm' => '0612123687',
+            'adresse' => '6 qurtier inas BD mohammed 5',
+            'ville' => 'BENI MELLAL',
+            'salarie' => 0,
+            'encadrant_id' => 1,
             'these_id' => ,
             'password'=>Hash::make('123456789'),
-            'avatar'=>,
+            'avatar'=>'uploads/default.jpg',
             'validation'=> 1
             ],[
             'name' => '',

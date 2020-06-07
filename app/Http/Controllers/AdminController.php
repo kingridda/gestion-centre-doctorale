@@ -38,9 +38,9 @@ class AdminController extends Controller
 
     public function get_list_doctorant(){
         $data = DB::table('users')->join('encadrants', 'users.encadrant_id', '=','encadrants.id')->where('validation', 1)->join('theses', 'users.these_id', '=', 'theses.id')->select(DB::raw('users.*, theses.sujet, encadrants.name as encadrant'))->get();
-        /*$pdf = PDF::loadView('list_docs', compact('data'));
-        return $pdf->download('list_doctorants.pdf');*/
-        return view('list_docs')->withData($data);
+        $pdf = PDF::loadView('list_docs', compact('data'));
+        return $pdf->download('list_doctorants.pdf');
+        return view('list_docs')->withData($data); 
         
     }
     public function these(){

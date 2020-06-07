@@ -11,7 +11,8 @@ use App\Message;
 use App\These;
 use App\Structure;
 use DB;
-use mikehaertl\pdftk\Pdf;
+//use mikehaertl\pdftk\Pdf;
+use PDF;
 class ProfileController extends Controller
 {   
 
@@ -24,17 +25,17 @@ class ProfileController extends Controller
     }
     public function preInscription(){
         $data = Auth::user();
-        $d=['Nom'=>$data->name,'Prenom'=>$data->prenom,'Email'=>$data->email,'CIN'=>$data->cin,'GSM'=>$data->gsm,'Ville'=>$data->ville,'Adresse'=>$data->adresse,'These'=>$data->these_id,'Dir de these'=>$data->encadrant_id,'date'=>date("Y/m/d")];
+       /* $d=['Nom'=>$data->name,'Prenom'=>$data->prenom,'Email'=>$data->email,'CIN'=>$data->cin,'GSM'=>$data->gsm,'Ville'=>$data->ville,'Adresse'=>$data->adresse,'These'=>$data->these_id,'Dir de these'=>$data->encadrant_id,'date'=>date("Y/m/d")];
         $pdf = new pdf("fiche inscription form GCD.pdf");
 
         $pdf->fillForm($d)
         ->saveAs('PDF/formulaire-'.$data->cin.'.pdf');
         header("Content-type:application/pdf; Content-Disposition: attachment; filename=formulaire-$data->cin.pdf"); 
         readfile('PDF/formulaire-'.$data->cin.'.pdf');
-
-        //$pdf = PDF::loadView('inscription', compact('data',$data));
-       	// $pdf->download('pre_inscription.pdf');
-        return view('inscription')->withData($data);
+*/
+        $pdf = PDF::loadView('inscription', compact('data',$data));
+       	return $pdf->download('pre_inscription.pdf');
+        //return view('inscription')->withData($data);
     }
     public function show_profile(){
         $user = Auth::user();
