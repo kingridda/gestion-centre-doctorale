@@ -17,7 +17,7 @@ class CreateThesesTable extends Migration
             $table->bigIncrements('id');
             $table->string('domaine',30);
             $table->string('filiere',30);
-            $table->string('sujet',50);
+            $table->string('sujet',100);
             $table->integer('structure_id')->nullable();          
             $table->timestamps();
         });

@@ -103,7 +103,7 @@ class structuresTableSeeder extends Seeder
             ],[
             'domaine' => 'management',
             'filiere' => 'e-BM',
-            'sujet' => 'analyse des systemes basées sur les réseau sociaux',
+            'sujet' => 'analyse des systemes basées sur les réseaux sociaux',
             'structure_id'=>3
             ],[
             'domaine' => 'optimization logistique',
