@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+
 class structuresTableSeeder extends Seeder
 {       
     /**
@@ -202,6 +203,7 @@ class structuresTableSeeder extends Seeder
         //users
 
         DB::table('users')->insert([[
+           // 'created_at' =>Carbon::create(2019, 1, 31, 0),
             'name' => 'ABOU ALI',
             'prenom' => 'Anas',
             'cin' => 'I805236',
