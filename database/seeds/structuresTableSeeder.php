@@ -42,24 +42,24 @@ class structuresTableSeeder extends Seeder
             ],
             [
             'domaine' => 'Information Security Research Team',
-            'filiere' => ,
+            'filiere' => '',
             'sujet' => '',
-            'structure_id'=>
+            'structure_id'=>''
             ],[
             'domaine' => 'Information Security Research Team',
-            'filiere' => ,
-            'sujet' => ,
-            'structure_id'=>
+            'filiere' =>'',
+            'sujet' =>'' ,
+            'structure_id'=>''
             ],[
             'domaine' => 'Information Security Research Team',
-            'filiere' => ,
-            'sujet' => ,
-            'structure_id'=>
+            'filiere' =>'' ,
+            'sujet' =>'' ,
+            'structure_id'=>''
             ],[
             'domaine' => 'Information Security Research Team',
-            'filiere' => ,
-            'sujet' => ,
-            'structure_id'=>
+            'filiere' =>'' ,
+            'sujet' =>'' ,
+            'structure_id'=>''
             ]]);
 
         //encadrants
@@ -107,7 +107,7 @@ class structuresTableSeeder extends Seeder
             'ville' => 'Tanger',
             'salarie' => 0,
             'encadrant_id' => 1,
-            'these_id' => ,
+            'these_id' =>'',
             'password'=>Hash::make('123456789'),
             'avatar'=> 'uploads/default.jpg',
             'validation'=> 1
@@ -122,194 +122,194 @@ class structuresTableSeeder extends Seeder
             'ville' => 'BENI MELLAL',
             'salarie' => 0,
             'encadrant_id' => 1,
-            'these_id' => ,
+            'these_id' =>'',
             'password'=>Hash::make('123456789'),
             'avatar'=>'uploads/default.jpg',
             'validation'=> 1
             ],[
-            'name' => '',
-            'prenom' => '',
-            'cin' => ,
-            'email' => ,
-            'gsm' => ,
-            'adresse' => ,
-            'ville' => ,
-            'salarie' => ,
-            'encadrant_id' => ,
-            'these_id' => ,
+            'name' => 'AMINE',
+            'prenom' => 'mohamed',
+            'cin' =>'K432342' ,
+            'email' =>'mohamed@gmail.com' ,
+            'gsm' => '0683692382',
+            'adresse' => '',
+            'ville' => '',
+            'salarie' => '',
+            'encadrant_id' => '',
+            'these_id' =>'',
             'password'=>Hash::make('123456789'),
-            'avatar'=>,
+            'avatar'=>'uploads/default.jpg',
             'validation'=> 1
             ],[
-            'name' => '',
-            'prenom' => '',
-            'cin' => ,
-            'email' => ,
-            'gsm' => ,
-            'adresse' => ,
-            'ville' => ,
-            'salarie' => ,
-            'encadrant_id' => ,
-            'these_id' => ,
+            'name' => 'ALI',
+            'prenom' => 'Karim',
+            'cin' =>'P234224' ,
+            'email' =>'karim@gmail.com' ,
+            'gsm' => '0683692382',
+            'adresse' => '',
+            'ville' => '',
+            'salarie' => '',
+            'encadrant_id' => '',
+            'these_id' =>'',
             'password'=>Hash::make('123456789'),
-            'avatar'=>,
+            'avatar'=>'uploads/default.jpg',
             'validation'=> 1
             ],[
-            'name' => '',
-            'prenom' => '',
-            'cin' => ,
-            'email' => ,
-            'gsm' => ,
-            'adresse' => ,
-            'ville' => ,
-            'salarie' => ,
-            'encadrant_id' => ,
-            'these_id' => ,
+            'name' => 'Chakroun',
+            'prenom' => 'Siham',
+            'cin' =>'T232462' ,
+            'email' =>'Siham@gmail.com' ,
+            'gsm' => '0683692382',
+            'adresse' => '',
+            'ville' => '',
+            'salarie' => '',
+            'encadrant_id' => '',
+            'these_id' =>'',
             'password'=>Hash::make('123456789'),
-            'avatar'=>,
+            'avatar'=>'uploads/default.jpg',
             'validation'=> 1
             ]]);
 
         //messages
          DB::table('messages')->insert([[
-            'encadrant_id' => ,
-            'user_id' => ,
-            'source' => ,
-            'objet'=>,
-            'contenu'=>,
+            'encadrant_id' =>'' ,
+            'user_id' =>'' ,
+            'source' =>'' ,
+            'objet'=>'',
+            'contenu'=>'',
             ],[
-            'encadrant_id' => ,
-            'user_id' => ,
-            'source' => ,
-            'objet'=>,
-            'contenu'=>,
+            'encadrant_id' =>'' ,
+            'user_id' =>'' ,
+            'source' =>'' ,
+            'objet'=>'',
+            'contenu'=>'',
             ],[
-            'encadrant_id' => ,
-            'user_id' => ,
-            'source' => ,
-            'objet'=>,
-            'contenu'=>,
+            'encadrant_id' =>'' ,
+            'user_id' =>'' ,
+            'source' =>'' ,
+            'objet'=>'',
+            'contenu'=>'',
             ],[
-            'encadrant_id' => ,
-            'user_id' => ,
-            'source' => ,
-            'objet'=>,
-            'contenu'=>,
+           'encadrant_id' =>'' ,
+            'user_id' =>'' ,
+            'source' =>'' ,
+            'objet'=>'',
+            'contenu'=>'',
             ],[
-            'encadrant_id' => ,
-            'user_id' => ,
-            'source' => ,
-            'objet'=>,
-            'contenu'=>,
+            'encadrant_id' =>'' ,
+            'user_id' =>'' ,
+            'source' =>'' ,
+            'objet'=>'',
+            'contenu'=>'',
             ]]);
         //forums
          DB::table('forums')->insert([[
-            'user_id' => ,
-            'question'=>,
-            'image'=>,
+            'user_id' => '',
+            'question'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'question'=>,
-            'image'=>,
+            'user_id' => '',
+            'question'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'question'=>,
-            'image'=>,
+            'user_id' => '',
+            'question'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'question'=>,
-            'image'=>,
+            'user_id' => '',
+            'question'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'question'=>,
-            'image'=>,
+            'user_id' => '',
+            'question'=>'',
+            'image'=>'',
             ]]);
         //reponses
          DB::table('rep_forums')->insert([[
-            'user_id' => ,
-            'forum_id' => ,
-            'reponse'=>,
-            'image'=>,
+            'user_id' => '',
+            'forum_id' => '',
+            'reponse'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'forum_id' => ,
-            'reponse'=>,
-            'image'=>,
+            'user_id' => '',
+            'forum_id' => '',
+            'reponse'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'forum_id' => ,
-            'reponse'=>,
-            'image'=>,
+            'user_id' => '',
+            'forum_id' => '',
+            'reponse'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'forum_id' => ,
-            'reponse'=>,
-            'image'=>,
+            'user_id' => '',
+            'forum_id' => '',
+            'reponse'=>'',
+            'image'=>'',
             ],[
-            'user_id' => ,
-            'forum_id' => ,
-            'reponse'=>,
-            'image'=>,
+            'user_id' => '',
+            'forum_id' => '',
+            'reponse'=>'',
+            'image'=>'',
             ]]);
         //soutenances 
             
         DB::table('soutenances')->insert([[
-            'user_id' => ,
-            'demande_soutenance' => ,//lien uploads/...
-            'amphi' => ,
-            'heure'=>, 
-            'date'=>, //null
+            'user_id' => '',
+            'demande_soutenance' =>'' ,//lien uploads/...
+            'amphi' => '',
+            'heure'=>'', 
+            'date'=>'', //null
             ],[
-            'user_id' => ,
-            'demande_soutenance' => ,//lien uploads/...
-            'amphi' => ,
-            'heure'=>, 
-            'date'=>, //null
+            'user_id' => '',
+            'demande_soutenance' =>'' ,//lien uploads/...
+            'amphi' => '',
+            'heure'=>'', 
+            'date'=>'', //null
             ],[
-            'user_id' => ,
-            'demande_soutenance' => ,//lien uploads/...
-            'amphi' => ,
-            'heure'=>, 
-            'date'=>, //null
+            'user_id' => '',
+            'demande_soutenance' =>'' ,//lien uploads/...
+            'amphi' => '',
+            'heure'=>'', 
+            'date'=>'', //null
             ],[
-            'user_id' => ,
-            'demande_soutenance' => ,//lien uploads/...
-            'amphi' => ,
-            'heure'=>, 
-            'date'=>, //null
+            'user_id' => '',
+            'demande_soutenance' =>'' ,//lien uploads/...
+            'amphi' => '',
+            'heure'=>'', 
+            'date'=>'', //null
             ],[
-            'user_id' => ,
-            'demande_soutenance' => ,//lien uploads/...
-            'amphi' => ,
-            'heure'=>, 
-            'date'=>, //null
+            'user_id' => '',
+            'demande_soutenance' =>'' ,//lien uploads/...
+            'amphi' => '',
+            'heure'=>'', 
+            'date'=>'', //null
             ]]);
         //rapports
         DB::table('rapports')->insert([[
-            'user_id' => ,
-            'title' => ,
-            'description' => ,
-            'attachment'=>, 
+            'user_id' =>'',
+            'title' =>'',
+            'description' => '',
+            'attachment'=>'', 
             ],[
-            'user_id' => ,
-            'title' => ,
-            'description' => ,
-            'attachment'=>, 
+            'user_id' =>'',
+            'title' =>'',
+            'description' => '',
+            'attachment'=>'', 
             ],[
-            'user_id' => ,
-            'title' => ,
-            'description' => ,
-            'attachment'=>, 
+            'user_id' =>'',
+            'title' =>'',
+            'description' => '',
+            'attachment'=>'', 
             ],[
-            'user_id' => ,
-            'title' => ,
-            'description' => ,
-            'attachment'=>, 
+            'user_id' =>'',
+            'title' =>'',
+            'description' => '',
+            'attachment'=>'', 
             ],[
-            'user_id' => ,
-            'title' => ,
-            'description' => ,
-            'attachment'=>, 
+            'user_id' =>'',
+            'title' =>'',
+            'description' => '',
+            'attachment'=>'', 
             ]]);
 
                     
