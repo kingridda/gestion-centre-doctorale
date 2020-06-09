@@ -129,7 +129,7 @@
                   data: {
                       labels:annee,
                       datasets: [{
-                          label: 'pré-inscriptions',
+                          label: 'inscriptions',
                           data: inscriptions,
 
                            backgroundColor: [
@@ -156,7 +156,15 @@
                       }]
                   },
 
+
                   options: {
+                    legend: {
+                          display: false
+                      },
+                    title: {
+                          display: true,
+                          text: 'nombre des inscriptions '
+                      },
                       scales: {
                           yAxes: [{
                               ticks: {
@@ -199,18 +207,33 @@
                       }]
                   },
 
-                  options: {},
+                  options: {
+                    
+                    title: {
+                          display: true,
+                          text: 'salariés/non salariés '
+                      },
+                  },
               });
-              //3eme canavas doctorant enregistré
+              //3eme canavas doctorant enregistré PAR ANNEE
+              let doc_par_ans = new Array();
+              let annee2 = new Array();
+              let cumulativ = 0;
+              response.tot_doctorants_par_annee.forEach(x =>
+                                          { cumulativ += x.nbr;
+                                            annee2.push(x.year);
+                                          doc_par_ans.push(cumulativ);});
+
+
               var docs_bars = document.getElementById("docs").getContext('2d');
             
                 var docs_chart = new Chart(docs_bars, {
                   type: 'bar',
                   data: {
-                      labels:['2020-2021','2022-2023'],
+                      labels:annee2,
                       datasets: [{
                           label: 'doctorants enregistré dans le centre',
-                          data: [20,30],
+                          data: doc_par_ans,
 
                            backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
@@ -237,6 +260,13 @@
                   },
 
                   options: {
+                    legend: {
+                          display: false
+                      },
+                      title: {
+                          display: true,
+                          text: 'nombre des doctorants du centre '
+                      },
                       scales: {
                           yAxes: [{
                               ticks: {
@@ -244,6 +274,7 @@
                               }
                           }]
                       }
+
                   }
               });
 
@@ -275,7 +306,15 @@
                       }]
                   },
 
-                  options: {}
+                  options: {
+                    legend: {
+                          display: false
+                      },
+                    title: {
+                          display: true,
+                          text: 'nombre des soutenances  '
+                      },
+                  }
               });
               
 
@@ -309,6 +348,13 @@
                   },
 
                  options : {
+                  legend: {
+                          display: false
+                      },
+                  title: {
+                          display: true,
+                          text: 'nombre des doctorants actives par structure '
+                      },
                       scale: {
                           angleLines: {
                               display: true

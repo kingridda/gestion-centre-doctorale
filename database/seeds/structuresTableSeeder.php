@@ -203,7 +203,7 @@ class structuresTableSeeder extends Seeder
         //users
 
         DB::table('users')->insert([[
-           // 'created_at' =>Carbon::create(2019, 1, 31, 0),
+            
             'name' => 'ABOU ALI',
             'prenom' => 'Anas',
             'cin' => 'I805236',
@@ -216,7 +216,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 2,
             'password'=>Hash::make('123456789'),
             'avatar'=> 'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],
             [
             'name' => 'RIDDA',
@@ -231,7 +232,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 3,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],[
             'name' => 'barhmi',
             'prenom' => 'simohamed',
@@ -245,7 +247,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 1,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'Outaleb',
             'prenom' => 'Mouad',
@@ -259,7 +262,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 4,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'Naoumi',
             'prenom' => 'Ilham',
@@ -273,7 +277,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 5,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'Fredirick',
             'prenom' => 'simohammed',
@@ -287,7 +292,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 6,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' =>Carbon::create(2019,6,9,0)
             ],[
             'name' => 'el ouardi',
             'prenom' => 'imane',
@@ -301,7 +307,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 7,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],[
             'name' => 'modafir',
             'prenom' => 'naima',
@@ -315,7 +322,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 8,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],[
             'name' => 'silloumi',
             'prenom' => 'nazih',
@@ -329,7 +337,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 9,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],[
             'name' => 'saber',
             'prenom' => 'mourad',
@@ -343,7 +352,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 10,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'hosni',
             'prenom' => 'moaad',
@@ -357,7 +367,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 11,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'saber',
             'prenom' => 'mohammed',
@@ -371,7 +382,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 12,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],[
             'name' => 'mouatasim',
             'prenom' => 'ahmed',
@@ -385,7 +397,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 13,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::now()
             ],[
             'name' => 'benhassan',
             'prenom' => 'yahya',
@@ -399,7 +412,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 14,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'rida',
             'prenom' => 'hajar',
@@ -413,7 +427,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 15,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'name' => 'el moritani',
             'prenom' => 'rabii',
@@ -427,7 +442,8 @@ class structuresTableSeeder extends Seeder
             'these_id' => 16,
             'password'=>Hash::make('123456789'),
             'avatar'=>'default.png',
-            'validation'=> 1
+            'validation'=> 1,
+            'created_at' => Carbon::create(2019,6,9,0)
             ]]);
 
         //messages
@@ -509,31 +525,36 @@ class structuresTableSeeder extends Seeder
             'demande_soutenance' => 'soutenance_sample.pdf',//lien ...
             'amphi' =>'A3',
             'heure'=> '09:15', 
-            'date'=>null, 
+            'date'=>null,
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'user_id' => 6,
             'demande_soutenance' => 'soutenance_sample.pdf',//lien uploads/...
             'amphi' => null,
             'heure'=>null, 
             'date'=>null, //null
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'user_id' => 7,
             'demande_soutenance' => 'soutenance_sample.pdf',//lien uploads/...
             'amphi' => null,
             'heure'=>null, 
             'date'=>null, //null
+            'created_at' => Carbon::create(2019,6,9,0)
             ],[
             'user_id' => 8,
             'demande_soutenance' => 'soutenance_sample.pdf',//lien uploads/...
             'amphi' => null,
             'heure'=>null, 
             'date'=>null, //null
+            'created_at' => Carbon::create(2020,6,9,0)
             ],[
             'user_id' => 9,
             'demande_soutenance' => 'soutenance_sample.pdf',//lien uploads/...
             'amphi' => 'A2',
             'heure'=> '08:15', 
             'date'=>null, //null
+            'created_at' => Carbon::create(2020,6,9,0)
             ]]);
         //rapports
         DB::table('rapports')->insert([[

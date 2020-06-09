@@ -17,7 +17,7 @@ class chartController extends Controller
     public function charts(){
     	$data['total_doctorants'] = DB::table('users')->whereNotNull('encadrant_id')->get()->count();
         $data['total_inscriptions'] = DB::table('users')->select(DB::raw('count(id) as nbr'),DB::raw('YEAR(created_at) year'))
-        ->groupby('year')
+        ->groupby('year')->orderBy('created_at', 'asc')
         ->get();
 
         $data['salarie'] = DB::table('users')->whereNotNull('encadrant_id')->where('salarie','!=', 0)->get()->count();
@@ -26,6 +26,9 @@ class chartController extends Controller
         ->groupby('year')
         ->get();
         $data['structures_values'] = DB::table('theses')->join('structures', 'structures.id', '=', 'theses.structure_id')->select(DB::raw('structures.titre ,count(*) as nbr'))->groupBy('structures.titre')->get();
+        $data['tot_doctorants_par_annee'] = DB::table('users')->select(DB::raw('count(id) as nbr'),DB::raw('YEAR(created_at) year'))
+        ->groupby('year')->orderBy('created_at', 'asc')
+        ->get();
 
         
 
