@@ -202,7 +202,6 @@ class structuresTableSeeder extends Seeder
         //users
 
         DB::table('users')->insert([[
-            'created_at' => Carbon::now(),
             'name' => 'ABOU ALI',
             'prenom' => 'Anas',
             'cin' => 'I805236',
@@ -403,7 +402,7 @@ class structuresTableSeeder extends Seeder
             'name' => 'rida',
             'prenom' => 'hajar',
             'cin' => 'K516512',
-            'email' => 'mourad@gmail.com',
+            'email' => 'hajar@gmail.com',
             'gsm' => '0788765841',
             'adresse' => 'wifaq 2 rue 5 N 4',
             'ville' => 'Meknes',
