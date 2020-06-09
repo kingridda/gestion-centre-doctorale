@@ -1,2 +1,7 @@
 *
 !.gitignore
+!default.png
+!error.jpg
+!error_sol.jpg
+!rapport_sample.pdf
+!soutenance_sample.pdf
