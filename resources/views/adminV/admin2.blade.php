@@ -6,19 +6,21 @@
                 <div class="col-lg-2 sidebar d-flex flex-column list-group list-group-flush viewport-max ">
                     <a href="/admin" class="list-group-item list-group-item-action text-center">
                         <img src="img/um5.jpg" alt="" class="img-fluid  mr-2"></a>
-                    <a href="admin/theses" class="list-group-item list-group-item-action menu-items">
+                    <a href="admin/theses" class="list-group-item list-group-item-action menu-items"><i class="fa fa-gears"></i>
                        Thèses en cours</a>
                     <a href="admin/dir" class="list-group-item list-group-item-action menu-items">
+                        <i class="fa fa-list-ul"></i> 
                         List des directeurs des thèses</a>
                     <a href="admin/doc" class="list-group-item list-group-item-action menu-items">
+                      <i class="fa fa-list-ul"></i> 
                       List des doctorants</a>
-                    <a href="admin/soutenances" class="list-group-item list-group-item-action menu-items">
+                    <a href="admin/soutenances" class="list-group-item list-group-item-action menu-items"><i class="fa fa-suitcase"></i> 
                         Demandes de soutenance</a>
-                    <a href="admin/liaison" class="list-group-item list-group-item-action menu-items">
+                    <a href="admin/liaison" class="list-group-item list-group-item-action menu-items"><i class="fa fa-link"></i>
                         lier les theses au doctorants</a>
-                    <a href="admin/liaison/s" class="list-group-item list-group-item-action menu-items">
+                    <a href="admin/liaison/s" class="list-group-item list-group-item-action menu-items"><i class="fa fa-trash"></i>
                         supprimer une liaisone thèse-doctorant</a>
-                    <a href="admin/validat" class="list-group-item list-group-item-action menu-items">
+                    <a href="admin/validat" class="list-group-item list-group-item-action menu-items"><i class="fa fa-check"></i>
                         valider les nouvelles inscriptions</a>
                 </div>
                 <!-- MAIN CARDS-->
