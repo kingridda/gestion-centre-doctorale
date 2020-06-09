@@ -16,17 +16,20 @@
 </head>
 <body>
 	<div style="margin-top: 0px;">
-		<img src="public\img\um5.jpg" alt="logo" height="100" style="float: right;">
-      	<img src="public\img\ensias.jpg" alt="logo" height="100"style="float: left;">
+		<img src="img\um5.jpg" alt="logo" height="100" style="float: right;">
+      	<img src="img\ensias.jpg" alt="logo" height="100"style="float: left;">
     </div>
-	<div  style="float: left; margin-top: 200px;">
-		<img src="/storage/{{$data->avatar}}" width="100">
+	<div  style="float: left; margin-top: 40px;">
+		<img src="" width="100">
 	</div>
-	<div style="margin-top: 200px;">
+	<div style="margin-top: 50px;">
 		<div style="text-align: center;">
 				<h2>Recu d'inscription</h2>
 				<p>Centre d'étude doctorale</p>
 				<p>2020/2021</p>
+		</div>
+		<div  style="float: left; margin-top: 50px;">
+			<img src="" width="100">
 		</div>
 		<div style="margin-left: 100px;">
 			<table>

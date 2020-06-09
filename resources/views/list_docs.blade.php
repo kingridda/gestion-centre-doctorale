@@ -17,8 +17,8 @@
 </head>
 <body>
 	<div style="margin-top: 0px;">
-		<img src="\img\um5.jpg" alt="logo" height="100" style="float: right;">
-      	<img src="\img\ensias.jpg" alt="logo" height="100"style="float: left;">
+		<img src="img\um5.jpg" alt="logo" height="100" style="float: right;">
+      	<img src="img\ensias.jpg" alt="logo" height="100"style="float: left;">
     </div>
 	<div style="text-align: center; margin-top: 30px;">
 				<h2>List des doctorants </h2>
