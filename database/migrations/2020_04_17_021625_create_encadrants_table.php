@@ -20,7 +20,7 @@ class CreateEncadrantsTable extends Migration
             $table->string('job_title')->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('avatar')->default('uploads/default.png');
+            $table->string('avatar')->default('default.png');
             $table->rememberToken();
             $table->timestamps();
         });

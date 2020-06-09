@@ -47,9 +47,13 @@
 <div class="container">
 	<div class="card">
 		<div class="card-header d-flex" style="justifyContent: space-between;">
+      @if($question->image)
 			<div class="col-12 col-sm-8">
+        
         <img src="/storage/{{$question->image}}" width="100%">
+
 			</div>
+      @endif
       <div class="col-12 col-sm pt-5">
         <span class="text-wrap">{{$question->question}}</span>
         <br/>

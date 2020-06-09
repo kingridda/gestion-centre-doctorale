@@ -32,7 +32,10 @@ class ProfileController extends Controller
         ->saveAs('PDF/formulaire-'.$data->cin.'.pdf');
         header("Content-type:application/pdf; Content-Disposition: attachment; filename=formulaire-$data->cin.pdf"); 
         readfile('PDF/formulaire-'.$data->cin.'.pdf');
+
 */
+        
+
         $pdf = PDF::loadView('inscription', compact('data',$data));
        	return $pdf->download('pre_inscription.pdf');
         //return view('inscription')->withData($data);

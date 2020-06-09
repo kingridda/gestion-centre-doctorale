@@ -16,8 +16,8 @@
 </head>
 <body>
 	<div style="margin-top: 0px;">
-		<img src="\img\um5.jpg" alt="logo" height="100" style="float: right;">
-      	<img src="\img\ensias.jpg" alt="logo" height="100"style="float: left;">
+		<img src="public\img\um5.jpg" alt="logo" height="100" style="float: right;">
+      	<img src="public\img\ensias.jpg" alt="logo" height="100"style="float: left;">
     </div>
 	<div  style="float: left; margin-top: 200px;">
 		<img src="/storage/{{$data->avatar}}" width="100">
