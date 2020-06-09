@@ -77,13 +77,16 @@
                         <div class="col-sm-4">
                                 <canvas id="soutenanc" width="400" height="400"></canvas>
                         </div>
-                        <div class="col-sm-4">
-                                <canvas id="structurs" width="400" height="400"></canvas>
-                        </div>
+                        
                         
                     </div>
+                    <div class="row">
+                      <div class="col-12">
+                                <canvas id="structurs" width="100%" height="100%"></canvas>
+                      </div>
 
-
+                    </div>
+                    
                 </div>
             </div>
     </section>
