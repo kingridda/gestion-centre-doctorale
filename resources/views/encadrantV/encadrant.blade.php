@@ -21,10 +21,10 @@
                 <div class="sidebar-wrapper">
                     <nav>
                         <ul class="nolist d-none d-md-block ">
-                        	<li><a href="/encadrant/show_profile">Profile</a></li> 
-                            <li><a href="/encadrant/env_message">Envoyer un message</a></li>            
-                            <li><a href="/encadrant/env_message/show">Boite des messages</a></li>
-                            <li><a href="/encadrant/compte_rendu">Comptes rendu</a></li>
+                        	<li><a href="/encadrant/show_profile"><i class="fa fa-user-o"></i> Profile</a></li> 
+                            <li><a href="/encadrant/env_message"><i class="fa fa-comments-o"></i> Envoyer un message</a></li>            
+                            <li><a href="/encadrant/env_message/show"><i class="fa fa-envelope-o"></i> Boite des messages</a></li>
+                            <li><a href="/encadrant/compte_rendu"><i class="fa fa-file-text-o"></i> Comptes rendu</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->
@@ -36,7 +36,7 @@
                         <div class="col-sm-5 col-10 p-4">
                             <div class="card text-white my-2 rounded">
                                 <div class="card-body bg-primary d-flex align-items-center justify-content-between">
-                                    <i class="fas fa-users fa-2x"></i>
+                                    <i class="fa fa-bell fa-lg"></i>
                                     <div class="inner-text text-right">
                                         <h3><span class="badge badge-danger badge-pill">1</span></h3>
                                         <h5>Nouveau message</h5>
@@ -50,7 +50,7 @@
                         <div class="col-sm-5 col-10 p-4">
                             <div class="card text-white my-2 rounded">
                                 <div class="card-body bg-primary d-flex align-items-center justify-content-between">
-                                    <i class="fas fa-users fa-2x"></i>
+                                    <i class="fa fa-bell"></i>
                                     <div class="inner-text text-right">
                                         <h3><span class="badge badge-danger badge-pill">1</span></h3>
                                         <h5>Nouveau Compte rendu / rapport</h5>

@@ -35,7 +35,7 @@
                         <div class="col-sm-6 col-md-4 col-lg-3 p-4">
                             <div class="card text-white my-2 rounded">
                                 <div class="card-body bg-primary d-flex align-items-center justify-content-between">
-                                    <i class="fas fa-users fa-2x"></i>
+                                    <i class="fa fa-bell"></i>
                                     <div class="inner-text text-right">
                                         <h3><span class="badge badge-danger badge-pill">{{$nb_notifications }}</span></h3>
                                         <h5>Nouvelle préinscription</h5>
@@ -51,7 +51,7 @@
                         <div class="col-sm-6 col-md-4 col-lg-3 p-4">
                             <div class="card text-white my-2 rounded">
                                 <div class="card-body bg-primary d-flex align-items-center justify-content-between">
-                                    <i class="fas fa-users fa-2x"></i>
+                                    <i class="fa fa-bell"></i>
                                     <div class="inner-text text-right">
                                         <h3><span class="badge badge-danger badge-pill">{{$nb_demande_souten }}</span> </h3>
                                         <h5>Nouvelle demande de soutenance</h5>
