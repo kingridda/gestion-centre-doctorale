@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -96,10 +97,12 @@
                 height:300px;}
 
         </style>
+            
+
     </head>
     <body>
         <div class="flex-center position-ref full-height bgimage">
-            <div class="top-left links"><a  href="encadrant/login">espace Directeur de thèse</a> </div>
+            <div class="top-left links"><a  href="encadrant/login">espace Professeur</a> </div>
                            
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -117,12 +120,13 @@
         </div>
 
             <div class="content container">
-                <div class="title m-b-md center">
-                    Nos filiere
+                <div class="title m-b-md center" style="color: #636b6f;">
+
+                    Nos filière
                 </div>
                 <div class="row ">
                 	<div class="col-lg-4 ">
-                    <img src="img/logiciel.png" style="border-radius:100%" width="15%" >
+                    <img src="img/logiciel.png" style="border-radius:100%" width="50%" >
                         
                             <h3>Génie logiciel</h3> 
                       <p> Le génie logiciel ou l'ingénierie logicielle une science de génie industriel qui étudie les méthodes de travail et les bonnes pratiques des ingénieurs qui développent des logiciels. Le génie logiciel s'intéresse en particulier aux procédures systématiques qui permettent d'arriver à ce que des logiciels de grande taille correspondent aux attentes du client, soient fiables, aient un coût d'entretien réduit et de bonnes performances tout en respectant les délais et les coûts de construction</p>
@@ -130,7 +134,7 @@
                 
                 
                 	<div class="col-lg-4 ">
-                    <img src="img/info_decision.png" style="border-radius:100%" width="15%">
+                    <img src="img/info_decision.png" style="border-radius:100%" width="50%">
             
                     <h3>Informatique décisionnelle</h3>
                      <p> L’informatique décisionnelle est l'informatique à l'usage des décideurs et des dirigeants d'entreprises. Elle désigne les moyens, les outils et les méthodes qui permettent de collecter, consolider, modéliser et restituer les données, matérielles ou immatérielles, d'une entreprise en vue d'offrir une aide à la décision et de permettre à un décideur d’avoir une vue d’ensemble de l’activité traitée. </p>
@@ -138,17 +142,17 @@
                 
                 
                 	<div class="col-lg-4 ">
-                    <img src="img/reseau.png" style="border-radius:100%" width="15%">
+                    <img src="img/reseau.png" style="border-radius:100%" width="50%">
     
                     <h3>Réseaux et télécommunications</h3>
-                     <br>
+                     
                       <p>La filière réseaux et Télécommunications avancées vise à former des ingénieurs avec une double compétence en réseaux et télécommunications couvrant le déploiement, le management, la maintenance et l’exploitation des réseaux de télécommunications actuels et de nouvelles générations ainsi que la mise en place de réseaux informatiques pour la gestion et l’interconnexion des réseaux de télécommunications. Les enseignements portent sur les systèmes de télécommunications fondements théoriques et applications ainsi que sur le déploiement et l’ingénierie des réseaux de télécommunications et réseaux informatiques.</p>
                       </div>
                 
                 <div class="row">
             
   					<div class="col-lg-4 ">
-                     <img src="img/elec.png" style="border-radius:100%" width="15%" >
+                     <img src="img/elec.png" style="border-radius:100%" width="50%" >
                 
                     <h3>Génie électrique</h3> 
                     <br>
@@ -157,7 +161,7 @@
                 
                 
                 	<div class="col-lg-4 ">
-                    <img src="img/genie_meca.png" style="border-radius:100%" width="15%">
+                    <img src="img/genie_meca.png" style="border-radius:100%" width="50%">
             
                     <h3>Génie mécanique</h3>
                     <br>
@@ -166,7 +170,7 @@
                 
                 
                 	<div class="col-lg-4 ">
-                    <img src="img/ener_env.png" style="border-radius:100%" width="15%">
+                    <img src="img/ener_env.png" style="border-radius:100%" width="50%">
     
                     <h3>Génie Energétique et Environnement</h3>
                     <br>   
