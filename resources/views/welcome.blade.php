@@ -15,6 +15,8 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/teacher.png">
+
         <style>
             html, body {
                 background-color: #fff;
