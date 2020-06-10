@@ -46,10 +46,27 @@
                 margin: 0px 150px 10px 150px;
                 padding-top: 20px;
             }
-            
+
+            #page-container {
+                  position: relative;
+                  min-height: 100vh;
+                }
+
+            #content-wrap {
+                  padding-bottom: 10rem;    /* Footer height */
+                }
+
+            #footer {
+                  position: absolute;
+                  bottom: 0;
+                              /* Footer height */
+                }
+                            
     </style>
 </head>
 <body>
+    <div id="page-container">
+    <div id="content-wrap">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -126,6 +143,7 @@
             @yield('content')
         </main>
     </div>
+    </div>
      <footer  class="footer" >
             <div class="footer-margin">   
             <p>Cet humble travail est dédié à notre cher professeur Mahmoud Nassar.</p>
@@ -134,5 +152,6 @@
             </div>
         </div>
     </footer>
+    </div>
 </body>
 </html>
