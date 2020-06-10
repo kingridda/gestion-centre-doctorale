@@ -34,7 +34,7 @@
       </div>
 </div>
 
-	<div class="container">
+<div class="container">
 		<div class="row row-content mt-5">
 			<div class="col-lg-4 " >
 				<center>
@@ -119,10 +119,8 @@
 			
 			</tbody>
 			</table>
-			</div>
-
-			</div>
-			</div>
 		</div>
 	</div>
+</div>
+	
 @endsection

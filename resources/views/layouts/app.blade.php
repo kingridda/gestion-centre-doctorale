@@ -31,7 +31,7 @@
 
             }
         .footer{
-                position: relative;
+                
                 bottom: 0;
                 height: 10rem;            
                 margin: 0px auto;
@@ -144,7 +144,7 @@
         </main>
     </div>
     </div>
-     <footer  class="footer" >
+     <footer  class="footer" id ="footer" >
             <div class="footer-margin">   
             <p>Cet humble travail est dédié à notre cher professeur Mahmoud Nassar.</p>
             <div class="">© 2020 Copyright

@@ -7,7 +7,9 @@
                 <div class="card-header" style="textAlign: center; fontWeight: bold;">accepter les nouveaux doctorants</div>
                 <div class="card-body">
                 	@if (count($users)==0)
-                	<h1>Aucun doctorant a validée</h1>
+                    <div class="alert alert-danger" role="alert">
+                      Aucune nouvelle préinscription a valider
+                    </div>
                 	@else
                     <form method="POST" action="/admin/validat">
                         @csrf
