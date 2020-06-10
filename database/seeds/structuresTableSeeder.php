@@ -143,7 +143,7 @@ class structuresTableSeeder extends Seeder
             'cin' => 'K151230',
             'email' => 'nassar@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=> 'nassar.png'
+            'avatar'=> 'default.png'
             ],
             [
             'name' => 'Mouhamed Janati',
