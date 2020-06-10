@@ -444,6 +444,36 @@ class structuresTableSeeder extends Seeder
             'avatar'=>'default.png',
             'validation'=> 1,
             'created_at' => Carbon::create(2019,6,9,0)
+            ],[
+            'name' => 'el ahmadi',
+            'prenom' => 'ossama',
+            'cin' => 'K555512',
+            'email' => 'ossama@gmail.com',
+            'gsm' => '0748465841',
+            'adresse' => 'DB mouloudi Bloc 6',
+            'ville' => 'FES',
+            'salarie' => 0,
+            'encadrant_id' => null,
+            'these_id' => null,
+            'password'=>Hash::make('123456789'),
+            'avatar'=>'default.png',
+            'validation'=> 0,
+            'created_at' => Carbon::create(2019,6,9,0)
+            ],[
+            'name' => 'wasmi',
+            'prenom' => 'ahmad',
+            'cin' => 'I145512',
+            'email' => 'wasmi@gmail.com',
+            'gsm' => '0625765841',
+            'adresse' => 'lot baraka N 8',
+            'ville' => 'TADLA',
+            'salarie' => 0,
+            'encadrant_id' =>null,
+            'these_id' => null,
+            'password'=>Hash::make('123456789'),
+            'avatar'=>'default.png',
+            'validation'=> 0,
+            'created_at' => Carbon::create(2019,6,9,0)
             ]]);
 
         //messages
