@@ -24,13 +24,13 @@
                 <div class="sidebar-wrapper">
                     <nav>
                         <ul class="nolist d-none d-md-block ">
-                            <li><a href="/show">Profile</a></li>            
-                            <li><a href="/profile/encm">Envoyer des messages</a></li>
-                            <li><a href="/profile/encm/show">Boite des messages</a></li>
-                            <li><a href="/profile/compte_rendu">Envoyer un compte rendu</a></li>
-                            <li><a href="/profile/compte_rendu/show">Mes comptes rendu</a></li>
-                            <li><a href="/forum">Forum</a></li>
-                            <li><a href="/profile/soutenance"> Demmande de soutenance</a></li>
+                            <li><a href="/show"><i class="fa fa-user-o"></i> Profile</a></li>            
+                            <li><a href="/profile/encm"><i class="fa fa-comments-o"></i> Envoyer des messages</a></li>
+                            <li><a href="/profile/encm/show"><i class="fa fa-envelope-o"></i> Boite des messages</a></li>
+                            <li><a href="/profile/compte_rendu"><i class="fa fa-file-text"></i> Envoyer un compte rendu</a></li>
+                            <li><a href="/profile/compte_rendu/show"><i class="fa fa-file-text-o"></i> Mes comptes rendu</a></li>
+                            <li><a href="/forum"><i class="fa fa-users"></i> Forum</a></li>
+                            <li><a href="/profile/soutenance"> <i class="fa fa-dot-circle-o"></i> Demmande de soutenance</a></li>
                         </ul>
                     </nav>
                 </div><!-- .sidebar-wrapepr -->

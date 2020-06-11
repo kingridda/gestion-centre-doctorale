@@ -143,7 +143,7 @@ class structuresTableSeeder extends Seeder
             'cin' => 'K151230',
             'email' => 'nassar@gcd.com',
             'password'=>Hash::make('123456789'),
-            'avatar'=> 'default.png'
+            'avatar'=> 'nassar.png'
             ],
             [
             'name' => 'Mouhamed Janati',
@@ -215,7 +215,7 @@ class structuresTableSeeder extends Seeder
             'encadrant_id' => 1,
             'these_id' => 2,
             'password'=>Hash::make('123456789'),
-            'avatar'=> 'default.png',
+            'avatar'=> 'anas.png',
             'validation'=> 1,
             'created_at' => Carbon::now()
             ],
@@ -231,7 +231,7 @@ class structuresTableSeeder extends Seeder
             'encadrant_id' => 1,
             'these_id' => 3,
             'password'=>Hash::make('123456789'),
-            'avatar'=>'default.png',
+            'avatar'=>'ridda.png',
             'validation'=> 1,
             'created_at' => Carbon::now()
             ],[
