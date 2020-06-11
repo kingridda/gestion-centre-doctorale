@@ -6,6 +6,9 @@
             <div class="card">
                 <div class="card-header" style="textAlign: center; fontWeight: bold;">accepter les nouveaux doctorants</div>
                 <div class="card-body">
+                	@if (count($users)==0)
+                	<h1>Aucun doctorant a validée</h1>
+                	@else
                     <form method="POST" action="/admin/validat">
                         @csrf
                         <div class="form-group row">
@@ -20,13 +23,13 @@
                                     @enderror
                             </div>
                         </div>
-                        
                         <div class="form-group row">
                             <div class="row pt-4 col-md-4 col-form-label offset-5" >
                                 <button class="btn btn-primary"> valider les ajouts </button>
                             </div>
                         </div>
                     </form>
+                    @endif
                 </div>
             </div>
         </div>
