@@ -1,3 +1,8 @@
+doctoral study center Managment Web App created with LARAVEL : app manage the process of registering comunicating and planing in a doctoral study center.
+    -send and recive messages between Student and his mentor
+    -passing reports and documents between student and mentor
+    -forum for student 
+    -director's managment console
 link : http://immense-taiga-42403.herokuapp.com
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
