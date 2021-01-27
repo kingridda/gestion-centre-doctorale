@@ -1,4 +1,5 @@
-Doctoral study center Managment Web App created with LARAVEL : app manage the process of registering comunicating and planing in a doctoral study center.<br />
+# Doctoral study center Managment 
+    Web App created with LARAVEL : app manage the process of registering comunicating and planing in a doctoral study center.<br />
     -communication based on mails-like messages between Student and mentors<br />
     -passing reports and documents between students and mentors<br />
     -forum for students issues & discussions<br />
