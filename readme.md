@@ -18,4 +18,21 @@ http://immense-taiga-42403.herokuapp.com
 
 
 ## Screenshots:
-<img />
+-home page
+![Alt text](screenshots/home.png?raw=true "Title")
+
+- login
+
+![Alt text](screenshots/login.png?raw=true "Title")
+
+- admin dashboard
+
+![Alt text](screenshots/admin_dash.png?raw=true "Title")
+
+- registration
+
+![Alt text](screenshots/registre.png?raw=true "Title")
+
+- phd defense planing 
+
+![Alt text](screenshots/valid_soutenance.png?raw=true "Title")
