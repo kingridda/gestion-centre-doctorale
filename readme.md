@@ -18,7 +18,7 @@ http://immense-taiga-42403.herokuapp.com
 
 
 ## Screenshots:
--home page
+- home page
 ![Alt text](screenshots/home.png?raw=true "Title")
 
 - login
