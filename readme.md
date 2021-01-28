@@ -9,6 +9,7 @@
 - director's managment console
 - Analytics Dashboard
 - managment of student's stream (applying, verifications, updates, reporing, admission, demandes, graduting, soutenance planing... )
+- generate inscription pdf and other useful pdfs
 - ...
 
 ## <span style="color:orange"><strong> preview : </strong></span>
@@ -16,5 +17,5 @@
 http://immense-taiga-42403.herokuapp.com
 
 
-## <span style="color:orange"><strong>Screenshots: </strong></span>
-
+## Screenshots:
+<img />
